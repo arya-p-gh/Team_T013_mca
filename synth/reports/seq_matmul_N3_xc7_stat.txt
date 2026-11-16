@@ -1,0 +1,28 @@
+
+11. Printing statistics.
+
+=== $paramod\seq_matmul\N=s32'00000000000000000000000000000011 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      519 wires
+      651 wire bits
+       20 public wires
+       80 public wire bits
+       11 ports
+       43 port bits
+      187 cells
+        1   $scopeinfo
+        1   BUFG
+        9   CARRY4
+        1   DSP48E1
+       36   FDRE
+       21   IBUF
+       33   LUT2
+       28   LUT3
+        4   LUT4
+        5   LUT5
+        2   LUT6
+       22   OBUF
+       24   RAM32M
+

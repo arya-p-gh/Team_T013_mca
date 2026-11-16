@@ -1,0 +1,2219 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.71+post (git sha1 5628c13240f670b97aaaca3d47940c4afb8ff572, Release, AppleClang clang++ 21.0.0.21000401)
+
+-- Running command `
+        read_verilog rtl/mac_unit.v rtl/pe.v rtl/systolic_array.v rtl/input_buffer.v rtl/output_buffer.v rtl/systolic_controller.v rtl/systolic_top.v rtl/seq_matmul.v; chparam -set N 3 systolic_top; synth_ice40 -top systolic_top -json synth/build/systolic_top_N3.json' --
+
+1. Executing Verilog-2005 frontend: rtl/mac_unit.v
+Parsing Verilog input from `rtl/mac_unit.v' to AST representation.
+Generating RTLIL representation for module `\mac_unit'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: rtl/pe.v
+Parsing Verilog input from `rtl/pe.v' to AST representation.
+Generating RTLIL representation for module `\pe'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: rtl/systolic_array.v
+Parsing Verilog input from `rtl/systolic_array.v' to AST representation.
+Generating RTLIL representation for module `\systolic_array'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: rtl/input_buffer.v
+Parsing Verilog input from `rtl/input_buffer.v' to AST representation.
+Generating RTLIL representation for module `\input_buffer'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: rtl/output_buffer.v
+Parsing Verilog input from `rtl/output_buffer.v' to AST representation.
+Generating RTLIL representation for module `\output_buffer'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: rtl/systolic_controller.v
+Parsing Verilog input from `rtl/systolic_controller.v' to AST representation.
+Generating RTLIL representation for module `\systolic_controller'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: rtl/systolic_top.v
+Parsing Verilog input from `rtl/systolic_top.v' to AST representation.
+Generating RTLIL representation for module `\systolic_top'.
+Successfully finished Verilog frontend.
+
+8. Executing Verilog-2005 frontend: rtl/seq_matmul.v
+Parsing Verilog input from `rtl/seq_matmul.v' to AST representation.
+Generating RTLIL representation for module `\seq_matmul'.
+Successfully finished Verilog frontend.
+Parameter \N = 3
+
+9. Executing AST frontend in derive mode using pre-parsed AST for module `\systolic_top'.
+Parameter \N = 3
+Generating RTLIL representation for module `$paramod\systolic_top\N=s32'00000000000000000000000000000011'.
+
+10. Executing SYNTH_ICE40 pass.
+
+10.1. Executing Verilog-2005 frontend: /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/cells_sim.v
+Parsing Verilog input from `/opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\SB_IO'.
+Generating RTLIL representation for module `\SB_GB_IO'.
+Generating RTLIL representation for module `\SB_GB'.
+Generating RTLIL representation for module `\SB_LUT4'.
+Generating RTLIL representation for module `\SB_CARRY'.
+Generating RTLIL representation for module `\SB_DFF'.
+Generating RTLIL representation for module `\SB_DFFE'.
+Generating RTLIL representation for module `\SB_DFFSR'.
+Generating RTLIL representation for module `\SB_DFFR'.
+Generating RTLIL representation for module `\SB_DFFSS'.
+Generating RTLIL representation for module `\SB_DFFS'.
+Generating RTLIL representation for module `\SB_DFFESR'.
+Generating RTLIL representation for module `\SB_DFFER'.
+Generating RTLIL representation for module `\SB_DFFESS'.
+Generating RTLIL representation for module `\SB_DFFES'.
+Generating RTLIL representation for module `\SB_DFFN'.
+Generating RTLIL representation for module `\SB_DFFNE'.
+Generating RTLIL representation for module `\SB_DFFNSR'.
+Generating RTLIL representation for module `\SB_DFFNR'.
+Generating RTLIL representation for module `\SB_DFFNSS'.
+Generating RTLIL representation for module `\SB_DFFNS'.
+Generating RTLIL representation for module `\SB_DFFNESR'.
+Generating RTLIL representation for module `\SB_DFFNER'.
+Generating RTLIL representation for module `\SB_DFFNESS'.
+Generating RTLIL representation for module `\SB_DFFNES'.
+Generating RTLIL representation for module `\SB_RAM40_4K'.
+Generating RTLIL representation for module `\SB_RAM40_4KNR'.
+Generating RTLIL representation for module `\SB_RAM40_4KNW'.
+Generating RTLIL representation for module `\SB_RAM40_4KNRNW'.
+Generating RTLIL representation for module `\ICESTORM_LC'.
+Generating RTLIL representation for module `\SB_PLL40_CORE'.
+Generating RTLIL representation for module `\SB_PLL40_PAD'.
+Generating RTLIL representation for module `\SB_PLL40_2_PAD'.
+Generating RTLIL representation for module `\SB_PLL40_2F_CORE'.
+Generating RTLIL representation for module `\SB_PLL40_2F_PAD'.
+Generating RTLIL representation for module `\SB_WARMBOOT'.
+Generating RTLIL representation for module `\SB_SPRAM256KA'.
+Generating RTLIL representation for module `\SB_HFOSC'.
+Generating RTLIL representation for module `\SB_LFOSC'.
+Generating RTLIL representation for module `\SB_RGBA_DRV'.
+Generating RTLIL representation for module `\SB_LED_DRV_CUR'.
+Generating RTLIL representation for module `\SB_RGB_DRV'.
+Generating RTLIL representation for module `\SB_I2C'.
+Generating RTLIL representation for module `\SB_SPI'.
+Generating RTLIL representation for module `\SB_LEDDA_IP'.
+Generating RTLIL representation for module `\SB_FILTER_50NS'.
+Generating RTLIL representation for module `\SB_IO_I3C'.
+Generating RTLIL representation for module `\SB_IO_OD'.
+Generating RTLIL representation for module `\SB_MAC16'.
+Generating RTLIL representation for module `\ICESTORM_RAM'.
+Successfully finished Verilog frontend.
+
+10.2. Executing HIERARCHY pass (managing design hierarchy).
+
+10.2.1. Analyzing design hierarchy..
+Top module:  \systolic_top
+Used module:     \output_buffer
+Used module:     \systolic_array
+Used module:         \pe
+Used module:             \mac_unit
+Used module:     \input_buffer
+Used module:     \systolic_controller
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+
+10.2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\mac_unit'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Generating RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\mac_unit'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+
+10.2.3. Executing AST frontend in derive mode using pre-parsed AST for module `\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Generating RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \N = 3
+Parameter \ACC_W = 20
+Parameter \ADDR_W = 4
+
+10.2.4. Executing AST frontend in derive mode using pre-parsed AST for module `\output_buffer'.
+Parameter \N = 3
+Parameter \ACC_W = 20
+Parameter \ADDR_W = 4
+Generating RTLIL representation for module `$paramod$15c37e303970b404295b546524b4d496aacb37a1\output_buffer'.
+Parameter \N = 3
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+
+10.2.5. Executing AST frontend in derive mode using pre-parsed AST for module `\systolic_array'.
+Parameter \N = 3
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Generating RTLIL representation for module `$paramod$c5e798326265f32956c2259961b06c99ef3362f5\systolic_array'.
+Parameter \N = 3
+Parameter \DATA_W = 8
+Parameter \IS_B = 1
+Parameter \ADDR_W = 4
+Parameter \CNT_W = 5
+
+10.2.6. Executing AST frontend in derive mode using pre-parsed AST for module `\input_buffer'.
+Parameter \N = 3
+Parameter \DATA_W = 8
+Parameter \IS_B = 1
+Parameter \ADDR_W = 4
+Parameter \CNT_W = 5
+Generating RTLIL representation for module `$paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer'.
+Parameter \N = 3
+Parameter \DATA_W = 8
+Parameter \IS_B = 0
+Parameter \ADDR_W = 4
+Parameter \CNT_W = 5
+
+10.2.7. Executing AST frontend in derive mode using pre-parsed AST for module `\input_buffer'.
+Parameter \N = 3
+Parameter \DATA_W = 8
+Parameter \IS_B = 0
+Parameter \ADDR_W = 4
+Parameter \CNT_W = 5
+Generating RTLIL representation for module `$paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer'.
+Parameter \N = 3
+Parameter \CNT_W = 5
+
+10.2.8. Executing AST frontend in derive mode using pre-parsed AST for module `\systolic_controller'.
+Parameter \N = 3
+Parameter \CNT_W = 5
+Generating RTLIL representation for module `$paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller'.
+
+10.2.9. Analyzing design hierarchy..
+Top module:  \systolic_top
+Used module:     $paramod$15c37e303970b404295b546524b4d496aacb37a1\output_buffer
+Used module:     $paramod$c5e798326265f32956c2259961b06c99ef3362f5\systolic_array
+Used module:         \pe
+Used module:             $paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\mac_unit
+Used module:     $paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer
+Used module:     $paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer
+Used module:     $paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe'.
+
+10.2.10. Analyzing design hierarchy..
+Top module:  \systolic_top
+Used module:     $paramod$15c37e303970b404295b546524b4d496aacb37a1\output_buffer
+Used module:     $paramod$c5e798326265f32956c2259961b06c99ef3362f5\systolic_array
+Used module:         $paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe
+Used module:             \mac_unit
+Used module:     $paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer
+Used module:     $paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer
+Used module:     $paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller
+Parameter \DATA_W = 8
+Parameter \ACC_W = 20
+Found cached RTLIL representation for module `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\mac_unit'.
+
+10.2.11. Analyzing design hierarchy..
+Top module:  \systolic_top
+Used module:     $paramod$15c37e303970b404295b546524b4d496aacb37a1\output_buffer
+Used module:     $paramod$c5e798326265f32956c2259961b06c99ef3362f5\systolic_array
+Used module:         $paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe
+Used module:             $paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\mac_unit
+Used module:     $paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer
+Used module:     $paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer
+Used module:     $paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller
+
+10.2.12. Analyzing design hierarchy..
+Top module:  \systolic_top
+Used module:     $paramod$15c37e303970b404295b546524b4d496aacb37a1\output_buffer
+Used module:     $paramod$c5e798326265f32956c2259961b06c99ef3362f5\systolic_array
+Used module:         $paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe
+Used module:             $paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\mac_unit
+Used module:     $paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer
+Used module:     $paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer
+Used module:     $paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller
+Removing unused module `\seq_matmul'.
+Removing unused module `\systolic_controller'.
+Removing unused module `\output_buffer'.
+Removing unused module `\input_buffer'.
+Removing unused module `\systolic_array'.
+Removing unused module `\pe'.
+Removing unused module `\mac_unit'.
+Removed 7 unused modules.
+
+10.3. Executing PROC pass (convert processes to netlists).
+
+10.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+10.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 3 switch rules as full_case in process $rtl/systolic_controller.v:39$proc$599 in module $paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.
+Marked 4 switch rules as full_case in process $rtl/input_buffer.v:41$proc$577 in module $paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.
+Marked 1 switch rules as full_case in process $rtl/input_buffer.v:36$proc$570 in module $paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.
+Marked 4 switch rules as full_case in process $rtl/input_buffer.v:41$proc$544 in module $paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.
+Marked 1 switch rules as full_case in process $rtl/input_buffer.v:36$proc$537 in module $paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.
+Marked 1 switch rules as full_case in process $rtl/output_buffer.v:23$proc$532 in module $paramod$15c37e303970b404295b546524b4d496aacb37a1\output_buffer.
+Marked 1 switch rules as full_case in process $rtl/pe.v:32$proc$530 in module $paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe.
+Marked 1 switch rules as full_case in process $rtl/mac_unit.v:31$proc$526 in module $paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\mac_unit.
+Removed a total of 0 dead cases.
+
+10.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 2 redundant assignments.
+Promoted 15 assignments to connections.
+
+10.3.4. Executing PROC_INIT pass (extract init attributes).
+
+10.3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+10.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~20 debug messages>
+
+10.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.$rtl/systolic_controller.v:57$proc$602'.
+Creating decoders for process `$paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.$rtl/systolic_controller.v:39$proc$599'.
+     1/2: $0\state[2:0]
+     2/2: $0\t[4:0]
+Creating decoders for process `$paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.$rtl/input_buffer.v:41$proc$577'.
+     1/5: $0\lanes[23:0] [23:16]
+     2/5: $0\lanes[23:0] [15:8]
+     3/5: $0\lanes[23:0] [7:0]
+     4/5: $1\k[31:0]
+     5/5: $1\l[31:0]
+Creating decoders for process `$paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.$rtl/input_buffer.v:36$proc$570'.
+     1/3: $1$memwr$\mem$rtl/input_buffer.v:37$569_EN[7:0]$576
+     2/3: $1$memwr$\mem$rtl/input_buffer.v:37$569_DATA[7:0]$575
+     3/3: $1$memwr$\mem$rtl/input_buffer.v:37$569_ADDR[3:0]$574
+Creating decoders for process `$paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.$rtl/input_buffer.v:41$proc$544'.
+     1/5: $0\lanes[23:0] [23:16]
+     2/5: $0\lanes[23:0] [15:8]
+     3/5: $0\lanes[23:0] [7:0]
+     4/5: $1\k[31:0]
+     5/5: $1\l[31:0]
+Creating decoders for process `$paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.$rtl/input_buffer.v:36$proc$537'.
+     1/3: $1$memwr$\mem$rtl/input_buffer.v:37$536_EN[7:0]$543
+     2/3: $1$memwr$\mem$rtl/input_buffer.v:37$536_DATA[7:0]$542
+     3/3: $1$memwr$\mem$rtl/input_buffer.v:37$536_ADDR[3:0]$541
+Creating decoders for process `$paramod$15c37e303970b404295b546524b4d496aacb37a1\output_buffer.$rtl/output_buffer.v:23$proc$532'.
+     1/1: $0\c_reg[179:0]
+Creating decoders for process `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe.$rtl/pe.v:32$proc$530'.
+     1/2: $0\b_out[7:0]
+     2/2: $0\a_out[7:0]
+Creating decoders for process `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\mac_unit.$rtl/mac_unit.v:31$proc$526'.
+     1/1: $0\acc[19:0]
+
+10.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.\feed_en' from process `$paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.$rtl/systolic_controller.v:57$proc$602'.
+No latch inferred for signal `$paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.\capture' from process `$paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.$rtl/systolic_controller.v:57$proc$602'.
+No latch inferred for signal `$paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.\arr_clr' from process `$paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.$rtl/systolic_controller.v:57$proc$602'.
+No latch inferred for signal `$paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.\arr_en' from process `$paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.$rtl/systolic_controller.v:57$proc$602'.
+No latch inferred for signal `$paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.\done' from process `$paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.$rtl/systolic_controller.v:57$proc$602'.
+
+10.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.\t' using process `$paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.$rtl/systolic_controller.v:39$proc$599'.
+  created $dff cell `$procdff$724' with positive edge clock.
+Creating register for signal `$paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.\state' using process `$paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.$rtl/systolic_controller.v:39$proc$599'.
+  created $dff cell `$procdff$725' with positive edge clock.
+Creating register for signal `$paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.\lanes' using process `$paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.$rtl/input_buffer.v:41$proc$577'.
+  created $dff cell `$procdff$726' with positive edge clock.
+Creating register for signal `$paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.\l' using process `$paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.$rtl/input_buffer.v:41$proc$577'.
+  created $dff cell `$procdff$727' with positive edge clock.
+Creating register for signal `$paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.\k' using process `$paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.$rtl/input_buffer.v:41$proc$577'.
+  created $dff cell `$procdff$728' with positive edge clock.
+Creating register for signal `$paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.$memwr$\mem$rtl/input_buffer.v:37$569_ADDR' using process `$paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.$rtl/input_buffer.v:36$proc$570'.
+  created $dff cell `$procdff$729' with positive edge clock.
+Creating register for signal `$paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.$memwr$\mem$rtl/input_buffer.v:37$569_DATA' using process `$paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.$rtl/input_buffer.v:36$proc$570'.
+  created $dff cell `$procdff$730' with positive edge clock.
+Creating register for signal `$paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.$memwr$\mem$rtl/input_buffer.v:37$569_EN' using process `$paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.$rtl/input_buffer.v:36$proc$570'.
+  created $dff cell `$procdff$731' with positive edge clock.
+Creating register for signal `$paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.\lanes' using process `$paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.$rtl/input_buffer.v:41$proc$544'.
+  created $dff cell `$procdff$732' with positive edge clock.
+Creating register for signal `$paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.\l' using process `$paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.$rtl/input_buffer.v:41$proc$544'.
+  created $dff cell `$procdff$733' with positive edge clock.
+Creating register for signal `$paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.\k' using process `$paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.$rtl/input_buffer.v:41$proc$544'.
+  created $dff cell `$procdff$734' with positive edge clock.
+Creating register for signal `$paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.$memwr$\mem$rtl/input_buffer.v:37$536_ADDR' using process `$paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.$rtl/input_buffer.v:36$proc$537'.
+  created $dff cell `$procdff$735' with positive edge clock.
+Creating register for signal `$paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.$memwr$\mem$rtl/input_buffer.v:37$536_DATA' using process `$paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.$rtl/input_buffer.v:36$proc$537'.
+  created $dff cell `$procdff$736' with positive edge clock.
+Creating register for signal `$paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.$memwr$\mem$rtl/input_buffer.v:37$536_EN' using process `$paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.$rtl/input_buffer.v:36$proc$537'.
+  created $dff cell `$procdff$737' with positive edge clock.
+Creating register for signal `$paramod$15c37e303970b404295b546524b4d496aacb37a1\output_buffer.\c_reg' using process `$paramod$15c37e303970b404295b546524b4d496aacb37a1\output_buffer.$rtl/output_buffer.v:23$proc$532'.
+  created $dff cell `$procdff$738' with positive edge clock.
+Creating register for signal `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe.\a_out' using process `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe.$rtl/pe.v:32$proc$530'.
+  created $dff cell `$procdff$739' with positive edge clock.
+Creating register for signal `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe.\b_out' using process `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe.$rtl/pe.v:32$proc$530'.
+  created $dff cell `$procdff$740' with positive edge clock.
+Creating register for signal `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\mac_unit.\acc' using process `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\mac_unit.$rtl/mac_unit.v:31$proc$526'.
+  created $dff cell `$procdff$741' with positive edge clock.
+
+10.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+10.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.$rtl/systolic_controller.v:57$proc$602'.
+Found and cleaned up 4 empty switches in `$paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.$rtl/systolic_controller.v:39$proc$599'.
+Removing empty process `$paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.$rtl/systolic_controller.v:39$proc$599'.
+Found and cleaned up 4 empty switches in `$paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.$rtl/input_buffer.v:41$proc$577'.
+Removing empty process `$paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.$rtl/input_buffer.v:41$proc$577'.
+Found and cleaned up 1 empty switch in `$paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.$rtl/input_buffer.v:36$proc$570'.
+Removing empty process `$paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.$rtl/input_buffer.v:36$proc$570'.
+Found and cleaned up 4 empty switches in `$paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.$rtl/input_buffer.v:41$proc$544'.
+Removing empty process `$paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.$rtl/input_buffer.v:41$proc$544'.
+Found and cleaned up 1 empty switch in `$paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.$rtl/input_buffer.v:36$proc$537'.
+Removing empty process `$paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.$rtl/input_buffer.v:36$proc$537'.
+Found and cleaned up 2 empty switches in `$paramod$15c37e303970b404295b546524b4d496aacb37a1\output_buffer.$rtl/output_buffer.v:23$proc$532'.
+Removing empty process `$paramod$15c37e303970b404295b546524b4d496aacb37a1\output_buffer.$rtl/output_buffer.v:23$proc$532'.
+Found and cleaned up 2 empty switches in `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe.$rtl/pe.v:32$proc$530'.
+Removing empty process `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe.$rtl/pe.v:32$proc$530'.
+Found and cleaned up 2 empty switches in `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\mac_unit.$rtl/mac_unit.v:31$proc$526'.
+Removing empty process `$paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\mac_unit.$rtl/mac_unit.v:31$proc$526'.
+Cleaned up 20 empty switches.
+
+10.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.
+<suppressed ~2 debug messages>
+Optimizing module systolic_top.
+Optimizing module $paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.
+Optimizing module $paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.
+Optimizing module $paramod$c5e798326265f32956c2259961b06c99ef3362f5\systolic_array.
+Optimizing module $paramod$15c37e303970b404295b546524b4d496aacb37a1\output_buffer.
+Optimizing module $paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe.
+Optimizing module $paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\mac_unit.
+
+10.4. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller...
+Checking module systolic_top...
+Checking module $paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer...
+Checking module $paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer...
+Checking module $paramod$c5e798326265f32956c2259961b06c99ef3362f5\systolic_array...
+Checking module $paramod$15c37e303970b404295b546524b4d496aacb37a1\output_buffer...
+Checking module $paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe...
+Checking module $paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\mac_unit...
+Found and reported 0 problems.
+
+10.5. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod$354e99de3b5ea5117aad7ee792999900295eb8b2\systolic_controller.
+Deleting now unused module $paramod$929e1a612b94904d5215a52fffa1d8905a21bad8\input_buffer.
+Deleting now unused module $paramod$ef6e9885e729807a2bd6976f05467b0df5c6c826\input_buffer.
+Deleting now unused module $paramod$c5e798326265f32956c2259961b06c99ef3362f5\systolic_array.
+Deleting now unused module $paramod$15c37e303970b404295b546524b4d496aacb37a1\output_buffer.
+Deleting now unused module $paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\pe.
+Deleting now unused module $paramod$06b5b8920ccde8e37797611c4ae822e66900a7a0\mac_unit.
+<suppressed ~15 debug messages>
+
+10.6. Executing TRIBUF pass.
+
+10.7. Executing DEMINOUT pass (demote inout ports to input or output).
+
+10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+<suppressed ~15 debug messages>
+
+10.9. Executing CHECK pass (checking for obvious problems).
+Checking module systolic_top...
+Found and reported 0 problems.
+
+10.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+Removed 33 unused cells and 203 unused wires.
+<suppressed ~43 debug messages>
+
+10.11. Executing OPT pass (performing simple optimizations).
+
+10.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+
+10.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 221 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Computing hashes of 192 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Computing hashes of 187 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Computing hashes of 184 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+<suppressed ~111 debug messages>
+Removed a total of 37 cells.
+
+10.11.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~105 debug messages>
+
+10.11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_top.
+    Consolidated identical input bits for $mux cell $flatten\u_buf_b.$procmux$696:
+      Old ports: A=8'00000000, B=8'11111111, Y=$flatten\u_buf_b.$0$memwr$\mem$rtl/input_buffer.v:37$536_EN[7:0]$540
+      New ports: A=1'0, B=1'1, Y=$flatten\u_buf_b.$0$memwr$\mem$rtl/input_buffer.v:37$536_EN[7:0]$540 [0]
+      New connections: $flatten\u_buf_b.$0$memwr$\mem$rtl/input_buffer.v:37$536_EN[7:0]$540 [7:1] = { $flatten\u_buf_b.$0$memwr$\mem$rtl/input_buffer.v:37$536_EN[7:0]$540 [0] $flatten\u_buf_b.$0$memwr$\mem$rtl/input_buffer.v:37$536_EN[7:0]$540 [0] $flatten\u_buf_b.$0$memwr$\mem$rtl/input_buffer.v:37$536_EN[7:0]$540 [0] $flatten\u_buf_b.$0$memwr$\mem$rtl/input_buffer.v:37$536_EN[7:0]$540 [0] $flatten\u_buf_b.$0$memwr$\mem$rtl/input_buffer.v:37$536_EN[7:0]$540 [0] $flatten\u_buf_b.$0$memwr$\mem$rtl/input_buffer.v:37$536_EN[7:0]$540 [0] $flatten\u_buf_b.$0$memwr$\mem$rtl/input_buffer.v:37$536_EN[7:0]$540 [0] }
+    Consolidated identical input bits for $mux cell $flatten\u_buf_a.$procmux$663:
+      Old ports: A=8'00000000, B=8'11111111, Y=$flatten\u_buf_a.$0$memwr$\mem$rtl/input_buffer.v:37$569_EN[7:0]$573
+      New ports: A=1'0, B=1'1, Y=$flatten\u_buf_a.$0$memwr$\mem$rtl/input_buffer.v:37$569_EN[7:0]$573 [0]
+      New connections: $flatten\u_buf_a.$0$memwr$\mem$rtl/input_buffer.v:37$569_EN[7:0]$573 [7:1] = { $flatten\u_buf_a.$0$memwr$\mem$rtl/input_buffer.v:37$569_EN[7:0]$573 [0] $flatten\u_buf_a.$0$memwr$\mem$rtl/input_buffer.v:37$569_EN[7:0]$573 [0] $flatten\u_buf_a.$0$memwr$\mem$rtl/input_buffer.v:37$569_EN[7:0]$573 [0] $flatten\u_buf_a.$0$memwr$\mem$rtl/input_buffer.v:37$569_EN[7:0]$573 [0] $flatten\u_buf_a.$0$memwr$\mem$rtl/input_buffer.v:37$569_EN[7:0]$573 [0] $flatten\u_buf_a.$0$memwr$\mem$rtl/input_buffer.v:37$569_EN[7:0]$573 [0] $flatten\u_buf_a.$0$memwr$\mem$rtl/input_buffer.v:37$569_EN[7:0]$573 [0] }
+  Optimizing cells in module \systolic_top.
+Performed a total of 2 changes.
+
+10.11.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 184 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Removed a total of 0 cells.
+
+10.11.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+Removed 0 unused cells and 36 unused wires.
+<suppressed ~1 debug messages>
+
+10.11.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+
+10.11.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.11.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~105 debug messages>
+
+10.11.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_top.
+Performed a total of 0 changes.
+
+10.11.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 184 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Removed a total of 0 cells.
+
+10.11.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.11.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+
+10.11.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+
+10.11.16. Finished fast OPT passes. (There is nothing left to do.)
+
+10.12. Executing FSM pass (extract and optimize FSM).
+
+10.12.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking systolic_top.u_ctrl.state as FSM state register:
+    Users of register don't seem to benefit from recoding.
+
+10.12.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+10.12.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+10.12.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+
+10.12.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+10.12.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+10.12.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+10.12.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+10.13. Executing OPT pass (performing simple optimizations).
+
+10.13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+
+10.13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 184 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Removed a total of 0 cells.
+
+10.13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~105 debug messages>
+
+10.13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_top.
+Performed a total of 0 changes.
+
+10.13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 184 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Removed a total of 0 cells.
+
+10.13.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $flatten\u_ctrl.$procdff$725 ($dff) from module systolic_top (D = $flatten\u_ctrl.$procmux$613_Y, Q = \u_ctrl.state, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$759 ($sdff) from module systolic_top (D = $flatten\u_ctrl.$procmux$613_Y, Q = \u_ctrl.state).
+Adding SRST signal on $flatten\u_ctrl.$procdff$724 ($dff) from module systolic_top (D = $flatten\u_ctrl.$procmux$632_Y, Q = \u_ctrl.t, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:337:slice$767 ($sdff) from module systolic_top (D = $flatten\u_ctrl.$procmux$632_Y, Q = \u_ctrl.t).
+Adding SRST signal on $flatten\u_array.\g_row[1].g_col[0].u_pe.$procdff$739 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[1].g_col[0].u_pe.$procmux$714_Y, Q = \u_array.g_row[1].g_col[0].u_pe.a_out, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$775 ($sdff) from module systolic_top (D = \u_buf_a.lanes [15:8], Q = \u_array.g_row[1].g_col[0].u_pe.a_out).
+Adding SRST signal on $flatten\u_array.\g_row[1].g_col[0].u_pe.$procdff$740 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[1].g_col[0].u_pe.$procmux$709_Y, Q = \u_array.g_row[1].g_col[0].u_pe.b_out, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$777 ($sdff) from module systolic_top (D = \u_array.g_row[0].g_col[0].u_pe.b_out, Q = \u_array.g_row[1].g_col[0].u_pe.b_out).
+Adding SRST signal on $flatten\u_array.\g_row[1].g_col[0].u_pe.\u_mac.$procdff$741 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[1].g_col[0].u_pe.\u_mac.$procmux$719_Y, Q = \u_array.g_row[1].g_col[0].u_pe.u_mac.acc, rval = 20'00000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$779 ($sdff) from module systolic_top (D = $flatten\u_array.\g_row[1].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528_Y, Q = \u_array.g_row[1].g_col[0].u_pe.u_mac.acc).
+Adding SRST signal on $flatten\u_buf_a.$procdff$726 ($dff) from module systolic_top (D = $flatten\u_buf_a.$rtl/input_buffer.v:48$memrd$583$\mem_DATA, Q = \u_buf_a.lanes [7:0], rval = 8'00000000).
+Adding SRST signal on $flatten\u_buf_a.$procdff$726 ($dff) from module systolic_top (D = $flatten\u_buf_a.$rtl/input_buffer.v:48$memrd$590$\mem_DATA, Q = \u_buf_a.lanes [15:8], rval = 8'00000000).
+Adding SRST signal on $flatten\u_buf_a.$procdff$726 ($dff) from module systolic_top (D = $flatten\u_buf_a.$rtl/input_buffer.v:48$memrd$597$\mem_DATA, Q = \u_buf_a.lanes [23:16], rval = 8'00000000).
+Adding SRST signal on $flatten\u_array.\g_row[1].g_col[1].u_pe.$procdff$739 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[1].g_col[1].u_pe.$procmux$714_Y, Q = \u_array.g_row[1].g_col[1].u_pe.a_out, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$796 ($sdff) from module systolic_top (D = \u_array.g_row[1].g_col[0].u_pe.a_out, Q = \u_array.g_row[1].g_col[1].u_pe.a_out).
+Adding SRST signal on $flatten\u_obuf.$procdff$738 ($dff) from module systolic_top (D = $flatten\u_obuf.$procmux$704_Y, Q = \u_obuf.c_reg, rval = 180'000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$798 ($sdff) from module systolic_top (D = { \u_array.g_row[2].g_col[2].u_pe.u_mac.acc \u_array.g_row[2].g_col[1].u_pe.u_mac.acc \u_array.g_row[2].g_col[0].u_pe.u_mac.acc \u_array.g_row[1].g_col[2].u_pe.u_mac.acc \u_array.g_row[1].g_col[1].u_pe.u_mac.acc \u_array.g_row[1].g_col[0].u_pe.u_mac.acc \u_array.g_row[0].g_col[2].u_pe.u_mac.acc \u_array.g_row[0].g_col[1].u_pe.u_mac.acc \u_array.g_row[0].g_col[0].u_pe.u_mac.acc }, Q = \u_obuf.c_reg).
+Adding SRST signal on $flatten\u_array.\g_row[1].g_col[1].u_pe.$procdff$740 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[1].g_col[1].u_pe.$procmux$709_Y, Q = \u_array.g_row[1].g_col[1].u_pe.b_out, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$800 ($sdff) from module systolic_top (D = \u_array.g_row[0].g_col[1].u_pe.b_out, Q = \u_array.g_row[1].g_col[1].u_pe.b_out).
+Adding SRST signal on $flatten\u_array.\g_row[1].g_col[1].u_pe.\u_mac.$procdff$741 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[1].g_col[1].u_pe.\u_mac.$procmux$719_Y, Q = \u_array.g_row[1].g_col[1].u_pe.u_mac.acc, rval = 20'00000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$802 ($sdff) from module systolic_top (D = $flatten\u_array.\g_row[1].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528_Y, Q = \u_array.g_row[1].g_col[1].u_pe.u_mac.acc).
+Adding SRST signal on $flatten\u_array.\g_row[0].g_col[0].u_pe.\u_mac.$procdff$741 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[0].g_col[0].u_pe.\u_mac.$procmux$719_Y, Q = \u_array.g_row[0].g_col[0].u_pe.u_mac.acc, rval = 20'00000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$804 ($sdff) from module systolic_top (D = $flatten\u_array.\g_row[0].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528_Y, Q = \u_array.g_row[0].g_col[0].u_pe.u_mac.acc).
+Adding SRST signal on $flatten\u_array.\g_row[0].g_col[0].u_pe.$procdff$740 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[0].g_col[0].u_pe.$procmux$709_Y, Q = \u_array.g_row[0].g_col[0].u_pe.b_out, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$806 ($sdff) from module systolic_top (D = \u_buf_b.lanes [7:0], Q = \u_array.g_row[0].g_col[0].u_pe.b_out).
+Adding SRST signal on $flatten\u_array.\g_row[0].g_col[0].u_pe.$procdff$739 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[0].g_col[0].u_pe.$procmux$714_Y, Q = \u_array.g_row[0].g_col[0].u_pe.a_out, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$808 ($sdff) from module systolic_top (D = \u_buf_a.lanes [7:0], Q = \u_array.g_row[0].g_col[0].u_pe.a_out).
+Adding SRST signal on $flatten\u_buf_b.$procdff$732 ($dff) from module systolic_top (D = $flatten\u_buf_b.$rtl/input_buffer.v:48$memrd$550$\mem_DATA, Q = \u_buf_b.lanes [7:0], rval = 8'00000000).
+Adding SRST signal on $flatten\u_buf_b.$procdff$732 ($dff) from module systolic_top (D = $flatten\u_buf_b.$rtl/input_buffer.v:48$memrd$558$\mem_DATA, Q = \u_buf_b.lanes [15:8], rval = 8'00000000).
+Adding SRST signal on $flatten\u_buf_b.$procdff$732 ($dff) from module systolic_top (D = $flatten\u_buf_b.$rtl/input_buffer.v:48$memrd$566$\mem_DATA, Q = \u_buf_b.lanes [23:16], rval = 8'00000000).
+Adding SRST signal on $flatten\u_array.\g_row[2].g_col[2].u_pe.\u_mac.$procdff$741 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[2].g_col[2].u_pe.\u_mac.$procmux$719_Y, Q = \u_array.g_row[2].g_col[2].u_pe.u_mac.acc, rval = 20'00000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$825 ($sdff) from module systolic_top (D = $flatten\u_array.\g_row[2].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528_Y, Q = \u_array.g_row[2].g_col[2].u_pe.u_mac.acc).
+Adding SRST signal on $flatten\u_array.\g_row[0].g_col[1].u_pe.\u_mac.$procdff$741 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[0].g_col[1].u_pe.\u_mac.$procmux$719_Y, Q = \u_array.g_row[0].g_col[1].u_pe.u_mac.acc, rval = 20'00000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$827 ($sdff) from module systolic_top (D = $flatten\u_array.\g_row[0].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528_Y, Q = \u_array.g_row[0].g_col[1].u_pe.u_mac.acc).
+Adding SRST signal on $flatten\u_array.\g_row[2].g_col[1].u_pe.$procdff$739 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[2].g_col[1].u_pe.$procmux$714_Y, Q = \u_array.g_row[2].g_col[1].u_pe.a_out, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$829 ($sdff) from module systolic_top (D = \u_array.g_row[2].g_col[0].u_pe.a_out, Q = \u_array.g_row[2].g_col[1].u_pe.a_out).
+Adding SRST signal on $flatten\u_array.\g_row[0].g_col[1].u_pe.$procdff$740 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[0].g_col[1].u_pe.$procmux$709_Y, Q = \u_array.g_row[0].g_col[1].u_pe.b_out, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$831 ($sdff) from module systolic_top (D = \u_buf_b.lanes [15:8], Q = \u_array.g_row[0].g_col[1].u_pe.b_out).
+Adding SRST signal on $flatten\u_array.\g_row[2].g_col[1].u_pe.\u_mac.$procdff$741 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[2].g_col[1].u_pe.\u_mac.$procmux$719_Y, Q = \u_array.g_row[2].g_col[1].u_pe.u_mac.acc, rval = 20'00000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$833 ($sdff) from module systolic_top (D = $flatten\u_array.\g_row[2].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528_Y, Q = \u_array.g_row[2].g_col[1].u_pe.u_mac.acc).
+Adding SRST signal on $flatten\u_array.\g_row[0].g_col[2].u_pe.$procdff$740 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[0].g_col[2].u_pe.$procmux$709_Y, Q = \u_array.g_row[0].g_col[2].u_pe.b_out, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$835 ($sdff) from module systolic_top (D = \u_buf_b.lanes [23:16], Q = \u_array.g_row[0].g_col[2].u_pe.b_out).
+Adding SRST signal on $flatten\u_array.\g_row[0].g_col[2].u_pe.\u_mac.$procdff$741 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[0].g_col[2].u_pe.\u_mac.$procmux$719_Y, Q = \u_array.g_row[0].g_col[2].u_pe.u_mac.acc, rval = 20'00000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$837 ($sdff) from module systolic_top (D = $flatten\u_array.\g_row[0].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528_Y, Q = \u_array.g_row[0].g_col[2].u_pe.u_mac.acc).
+Adding SRST signal on $flatten\u_array.\g_row[0].g_col[1].u_pe.$procdff$739 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[0].g_col[1].u_pe.$procmux$714_Y, Q = \u_array.g_row[0].g_col[1].u_pe.a_out, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$839 ($sdff) from module systolic_top (D = \u_array.g_row[0].g_col[0].u_pe.a_out, Q = \u_array.g_row[0].g_col[1].u_pe.a_out).
+Adding SRST signal on $flatten\u_array.\g_row[2].g_col[0].u_pe.$procdff$739 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[2].g_col[0].u_pe.$procmux$714_Y, Q = \u_array.g_row[2].g_col[0].u_pe.a_out, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$841 ($sdff) from module systolic_top (D = \u_buf_a.lanes [23:16], Q = \u_array.g_row[2].g_col[0].u_pe.a_out).
+Adding SRST signal on $flatten\u_array.\g_row[2].g_col[0].u_pe.\u_mac.$procdff$741 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[2].g_col[0].u_pe.\u_mac.$procmux$719_Y, Q = \u_array.g_row[2].g_col[0].u_pe.u_mac.acc, rval = 20'00000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$843 ($sdff) from module systolic_top (D = $flatten\u_array.\g_row[2].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528_Y, Q = \u_array.g_row[2].g_col[0].u_pe.u_mac.acc).
+Adding SRST signal on $flatten\u_array.\g_row[1].g_col[2].u_pe.$procdff$740 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[1].g_col[2].u_pe.$procmux$709_Y, Q = \u_array.g_row[1].g_col[2].u_pe.b_out, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$845 ($sdff) from module systolic_top (D = \u_array.g_row[0].g_col[2].u_pe.b_out, Q = \u_array.g_row[1].g_col[2].u_pe.b_out).
+Adding SRST signal on $flatten\u_array.\g_row[1].g_col[2].u_pe.\u_mac.$procdff$741 ($dff) from module systolic_top (D = $flatten\u_array.\g_row[1].g_col[2].u_pe.\u_mac.$procmux$719_Y, Q = \u_array.g_row[1].g_col[2].u_pe.u_mac.acc, rval = 20'00000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$847 ($sdff) from module systolic_top (D = $flatten\u_array.\g_row[1].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528_Y, Q = \u_array.g_row[1].g_col[2].u_pe.u_mac.acc).
+
+10.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+Removed 58 unused cells and 54 unused wires.
+<suppressed ~59 debug messages>
+
+10.13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+<suppressed ~1 debug messages>
+
+10.13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~19 debug messages>
+
+10.13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_top.
+Performed a total of 0 changes.
+
+10.13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 148 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Computing hashes of 145 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Computing hashes of 142 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+<suppressed ~18 debug messages>
+Removed a total of 6 cells.
+
+10.13.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+Removed 0 unused cells and 6 unused wires.
+<suppressed ~1 debug messages>
+
+10.13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+
+10.13.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.13.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~19 debug messages>
+
+10.13.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_top.
+Performed a total of 0 changes.
+
+10.13.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 142 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Removed a total of 0 cells.
+
+10.13.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.13.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+
+10.13.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+
+10.13.23. Finished fast OPT passes. (There is nothing left to do.)
+
+10.14. Executing WREDUCE pass (reducing word size of cells).
+Removed top 28 address bits (of 32) from memory read port systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$memrd$550$\mem (u_buf_b.mem).
+Removed top 28 address bits (of 32) from memory read port systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$memrd$558$\mem (u_buf_b.mem).
+Removed top 28 address bits (of 32) from memory read port systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$memrd$566$\mem (u_buf_b.mem).
+Removed top 28 address bits (of 32) from memory read port systolic_top.$flatten\u_buf_a.$rtl/input_buffer.v:48$memrd$583$\mem (u_buf_a.mem).
+Removed top 28 address bits (of 32) from memory read port systolic_top.$flatten\u_buf_a.$rtl/input_buffer.v:48$memrd$590$\mem (u_buf_a.mem).
+Removed top 28 address bits (of 32) from memory read port systolic_top.$flatten\u_buf_a.$rtl/input_buffer.v:48$memrd$597$\mem (u_buf_a.mem).
+Removed top 1 bits (of 2) from port B of cell systolic_top.$auto$simple.cc:214:make_patterns_logic$764 ($ne).
+Removed top 1 bits (of 3) from port B of cell systolic_top.$flatten\u_ctrl.$rtl/systolic_controller.v:61$eq$606 ($eq).
+Removed top 1 bits (of 3) from port B of cell systolic_top.$flatten\u_ctrl.$rtl/systolic_controller.v:59$eq$604 ($eq).
+Removed top 2 bits (of 3) from port B of cell systolic_top.$flatten\u_ctrl.$rtl/systolic_controller.v:58$eq$603 ($eq).
+Removed top 2 bits (of 5) from port B of cell systolic_top.$flatten\u_ctrl.$rtl/systolic_controller.v:47$eq$600 ($eq).
+Removed top 28 bits (of 32) from port A of cell systolic_top.$flatten\u_buf_a.$rtl/input_buffer.v:48$add$598 ($add).
+Removed top 28 bits (of 32) from port Y of cell systolic_top.$flatten\u_buf_a.$rtl/input_buffer.v:48$add$598 ($add).
+Removed top 28 bits (of 32) from port B of cell systolic_top.$flatten\u_buf_a.$rtl/input_buffer.v:48$add$598 ($add).
+Removed top 29 bits (of 32) from port A of cell systolic_top.$flatten\u_buf_a.$rtl/input_buffer.v:48$add$591 ($add).
+Removed top 28 bits (of 32) from port Y of cell systolic_top.$flatten\u_buf_a.$rtl/input_buffer.v:48$add$591 ($add).
+Removed top 28 bits (of 32) from port B of cell systolic_top.$flatten\u_buf_a.$rtl/input_buffer.v:48$add$591 ($add).
+Removed top 29 bits (of 32) from port B of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$add$568 ($add).
+Removed top 28 bits (of 32) from port Y of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$add$568 ($add).
+Removed top 28 bits (of 32) from port A of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$add$568 ($add).
+Removed top 29 bits (of 32) from port B of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$mul$567 ($mul).
+Removed top 28 bits (of 32) from port Y of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$mul$567 ($mul).
+Removed top 29 bits (of 32) from port B of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:47$lt$564 ($lt).
+Removed top 30 bits (of 32) from port B of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:47$ge$562 ($ge).
+Removed top 30 bits (of 32) from port B of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:46$sub$561 ($sub).
+Removed top 26 bits (of 32) from port Y of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:46$sub$561 ($sub).
+Removed top 30 bits (of 32) from port B of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$add$560 ($add).
+Removed top 28 bits (of 32) from port Y of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$add$560 ($add).
+Removed top 28 bits (of 32) from port A of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$add$560 ($add).
+Removed top 29 bits (of 32) from port B of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$mul$559 ($mul).
+Removed top 28 bits (of 32) from port Y of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$mul$559 ($mul).
+Removed top 29 bits (of 32) from port B of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:47$lt$556 ($lt).
+Removed top 31 bits (of 32) from port B of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:47$ge$554 ($ge).
+Removed top 31 bits (of 32) from port B of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:46$sub$553 ($sub).
+Removed top 26 bits (of 32) from port Y of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:46$sub$553 ($sub).
+Removed top 26 bits (of 32) from port A of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$mul$551 ($mul).
+Removed top 29 bits (of 32) from port B of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$mul$551 ($mul).
+Converting cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$mul$551 ($mul) from signed to unsigned.
+Removed top 28 bits (of 32) from port Y of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$mul$551 ($mul).
+Removed top 1 bits (of 6) from port A of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$mul$551 ($mul).
+Removed top 1 bits (of 3) from port B of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$mul$551 ($mul).
+Removed top 26 bits (of 32) from port A of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:47$lt$548 ($lt).
+Removed top 29 bits (of 32) from port B of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:47$lt$548 ($lt).
+Converting cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:47$lt$548 ($lt) from signed to unsigned.
+Removed top 1 bits (of 6) from port A of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:47$lt$548 ($lt).
+Removed top 1 bits (of 3) from port B of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:47$lt$548 ($lt).
+Removed top 31 bits (of 32) from port B of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:47$ge$546 ($ge).
+Removed top 4 bits (of 20) from port B of cell systolic_top.$flatten\u_array.\g_row[2].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528 ($add).
+Removed top 4 bits (of 20) from port B of cell systolic_top.$flatten\u_array.\g_row[2].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528 ($add).
+Removed top 4 bits (of 20) from port B of cell systolic_top.$flatten\u_array.\g_row[2].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528 ($add).
+Removed top 4 bits (of 20) from port B of cell systolic_top.$flatten\u_array.\g_row[1].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528 ($add).
+Removed top 4 bits (of 20) from port B of cell systolic_top.$flatten\u_array.\g_row[1].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528 ($add).
+Removed top 4 bits (of 20) from port B of cell systolic_top.$flatten\u_array.\g_row[1].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528 ($add).
+Removed top 4 bits (of 20) from port B of cell systolic_top.$flatten\u_array.\g_row[0].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528 ($add).
+Removed top 4 bits (of 20) from port B of cell systolic_top.$flatten\u_array.\g_row[0].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528 ($add).
+Removed top 4 bits (of 20) from port B of cell systolic_top.$flatten\u_array.\g_row[0].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528 ($add).
+Removed top 27 bits (of 30) from port B of cell systolic_top.$flatten\u_obuf.$rtl/output_buffer.v:28$mul$533 ($mul).
+Removed top 23 bits (of 30) from port Y of cell systolic_top.$flatten\u_obuf.$rtl/output_buffer.v:28$mul$533 ($mul).
+Removed top 26 bits (of 32) from port A of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$mul$567 ($mul).
+Removed top 26 bits (of 32) from port A of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:47$lt$564 ($lt).
+Removed top 26 bits (of 32) from port A of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$mul$559 ($mul).
+Removed top 26 bits (of 32) from port A of cell systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:47$lt$556 ($lt).
+Removed top 28 bits (of 32) from wire systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$add$552_Y.
+Removed top 28 bits (of 32) from wire systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$mul$559_Y.
+Removed top 28 bits (of 32) from wire systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$add$560_Y.
+Removed top 28 bits (of 32) from wire systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$mul$567_Y.
+Removed top 28 bits (of 32) from wire systolic_top.$flatten\u_buf_b.$rtl/input_buffer.v:48$add$568_Y.
+Removed top 28 bits (of 32) from wire systolic_top.$flatten\u_buf_a.$rtl/input_buffer.v:48$add$591_Y.
+Removed top 28 bits (of 32) from wire systolic_top.$flatten\u_buf_a.$rtl/input_buffer.v:48$add$598_Y.
+Removed top 23 bits (of 32) from wire systolic_top.$flatten\u_obuf.$rtl/output_buffer.v:28$add$534_Y.
+
+10.15. Executing PEEPOPT pass (run peephole optimizers).
+right shiftmul pattern in systolic_top: shift=$flatten\u_obuf.$rtl/output_buffer.v:28$shiftx$535, mul=$flatten\u_obuf.$rtl/output_buffer.v:28$mul$533
+shiftpow2 pattern in systolic_top: shift=$flatten\u_obuf.$rtl/output_buffer.v:28$shiftx$535, index=\rd_addr, stride=32, width=20, ways=16
+
+10.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+Removed 1 unused cells and 9 unused wires.
+<suppressed ~2 debug messages>
+
+10.17. Executing SHARE pass (SAT-based resource sharing).
+
+10.18. Executing TECHMAP pass (map to technology primitives).
+
+10.18.1. Executing Verilog-2005 frontend: /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/cmp2lut.v
+Parsing Verilog input from `/opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+10.18.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~134 debug messages>
+
+10.19. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+
+10.20. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+
+10.21. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module systolic_top:
+  creating $macc model for $flatten\u_array.\g_row[2].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:28$mul$525 ($mul).
+  creating $macc model for $flatten\u_array.\g_row[2].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528 ($add).
+  creating $macc model for $flatten\u_array.\g_row[0].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528 ($add).
+  creating $macc model for $flatten\u_array.\g_row[2].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:28$mul$525 ($mul).
+  creating $macc model for $flatten\u_buf_b.$rtl/input_buffer.v:48$mul$551 ($mul).
+  creating $macc model for $flatten\u_array.\g_row[1].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:28$mul$525 ($mul).
+  creating $macc model for $flatten\u_buf_b.$rtl/input_buffer.v:46$sub$553 ($sub).
+  creating $macc model for $flatten\u_buf_b.$rtl/input_buffer.v:48$mul$559 ($mul).
+  creating $macc model for $flatten\u_buf_b.$rtl/input_buffer.v:48$add$560 ($add).
+  creating $macc model for $flatten\u_buf_b.$rtl/input_buffer.v:46$sub$561 ($sub).
+  creating $macc model for $flatten\u_buf_b.$rtl/input_buffer.v:48$mul$567 ($mul).
+  creating $macc model for $flatten\u_buf_b.$rtl/input_buffer.v:48$add$568 ($add).
+  creating $macc model for $flatten\u_array.\g_row[0].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:28$mul$525 ($mul).
+  creating $macc model for $flatten\u_array.\g_row[0].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528 ($add).
+  creating $macc model for $flatten\u_array.\g_row[1].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528 ($add).
+  creating $macc model for $flatten\u_array.\g_row[2].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:28$mul$525 ($mul).
+  creating $macc model for $flatten\u_buf_a.$rtl/input_buffer.v:48$add$591 ($add).
+  creating $macc model for $flatten\u_array.\g_row[1].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528 ($add).
+  creating $macc model for $flatten\u_array.\g_row[1].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:28$mul$525 ($mul).
+  creating $macc model for $flatten\u_buf_a.$rtl/input_buffer.v:48$add$598 ($add).
+  creating $macc model for $flatten\u_array.\g_row[1].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528 ($add).
+  creating $macc model for $flatten\u_array.\g_row[0].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528 ($add).
+  creating $macc model for $flatten\u_array.\g_row[2].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528 ($add).
+  creating $macc model for $flatten\u_array.\g_row[0].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:28$mul$525 ($mul).
+  creating $macc model for $flatten\u_ctrl.$rtl/systolic_controller.v:48$add$601 ($add).
+  creating $macc model for $flatten\u_array.\g_row[2].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528 ($add).
+  creating $macc model for $flatten\u_array.\g_row[0].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:28$mul$525 ($mul).
+  creating $macc model for $flatten\u_array.\g_row[1].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:28$mul$525 ($mul).
+  merging $macc model for $flatten\u_array.\g_row[2].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:28$mul$525 into $flatten\u_array.\g_row[2].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528.
+  merging $macc model for $flatten\u_array.\g_row[2].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:28$mul$525 into $flatten\u_array.\g_row[2].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528.
+  merging $macc model for $flatten\u_array.\g_row[0].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:28$mul$525 into $flatten\u_array.\g_row[0].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528.
+  merging $macc model for $flatten\u_array.\g_row[1].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:28$mul$525 into $flatten\u_array.\g_row[1].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528.
+  merging $macc model for $flatten\u_array.\g_row[1].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:28$mul$525 into $flatten\u_array.\g_row[1].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528.
+  merging $macc model for $flatten\u_array.\g_row[1].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:28$mul$525 into $flatten\u_array.\g_row[1].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528.
+  merging $macc model for $flatten\u_array.\g_row[0].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:28$mul$525 into $flatten\u_array.\g_row[0].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528.
+  merging $macc model for $flatten\u_buf_b.$rtl/input_buffer.v:48$mul$567 into $flatten\u_buf_b.$rtl/input_buffer.v:48$add$568.
+  merging $macc model for $flatten\u_buf_b.$rtl/input_buffer.v:48$mul$559 into $flatten\u_buf_b.$rtl/input_buffer.v:48$add$560.
+  merging $macc model for $flatten\u_array.\g_row[0].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:28$mul$525 into $flatten\u_array.\g_row[0].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528.
+  merging $macc model for $flatten\u_array.\g_row[2].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:28$mul$525 into $flatten\u_array.\g_row[2].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528.
+  creating $alu model for $macc $flatten\u_buf_a.$rtl/input_buffer.v:48$add$591.
+  creating $alu model for $macc $flatten\u_buf_a.$rtl/input_buffer.v:48$add$598.
+  creating $alu model for $macc $flatten\u_ctrl.$rtl/systolic_controller.v:48$add$601.
+  creating $alu model for $macc $flatten\u_buf_b.$rtl/input_buffer.v:46$sub$561.
+  creating $alu model for $macc $flatten\u_buf_b.$rtl/input_buffer.v:46$sub$553.
+  creating $macc cell for $flatten\u_buf_b.$rtl/input_buffer.v:48$add$568: $auto$alumacc.cc:427:replace_macc$858
+  creating $macc cell for $flatten\u_array.\g_row[1].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528: $auto$alumacc.cc:427:replace_macc$859
+  creating $macc cell for $flatten\u_array.\g_row[2].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528: $auto$alumacc.cc:427:replace_macc$860
+  creating $macc cell for $flatten\u_buf_b.$rtl/input_buffer.v:48$add$560: $auto$alumacc.cc:427:replace_macc$861
+  creating $macc cell for $flatten\u_array.\g_row[2].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528: $auto$alumacc.cc:427:replace_macc$862
+  creating $macc cell for $flatten\u_array.\g_row[0].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528: $auto$alumacc.cc:427:replace_macc$863
+  creating $macc cell for $flatten\u_array.\g_row[1].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528: $auto$alumacc.cc:427:replace_macc$864
+  creating $macc cell for $flatten\u_buf_b.$rtl/input_buffer.v:48$mul$551: $auto$alumacc.cc:427:replace_macc$865
+  creating $macc cell for $flatten\u_array.\g_row[0].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528: $auto$alumacc.cc:427:replace_macc$866
+  creating $macc cell for $flatten\u_array.\g_row[0].g_col[1].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528: $auto$alumacc.cc:427:replace_macc$867
+  creating $macc cell for $flatten\u_array.\g_row[2].g_col[2].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528: $auto$alumacc.cc:427:replace_macc$868
+  creating $macc cell for $flatten\u_array.\g_row[1].g_col[0].u_pe.\u_mac.$rtl/mac_unit.v:35$add$528: $auto$alumacc.cc:427:replace_macc$869
+  creating $alu model for $flatten\u_buf_b.$rtl/input_buffer.v:47$ge$546 ($ge): new $alu
+  creating $alu model for $flatten\u_buf_b.$rtl/input_buffer.v:47$lt$548 ($lt): new $alu
+  creating $alu model for $flatten\u_buf_b.$rtl/input_buffer.v:47$ge$554 ($ge): merged with $flatten\u_buf_b.$rtl/input_buffer.v:46$sub$553.
+  creating $alu model for $flatten\u_buf_b.$rtl/input_buffer.v:47$lt$556 ($lt): new $alu
+  creating $alu model for $flatten\u_buf_b.$rtl/input_buffer.v:47$ge$562 ($ge): merged with $flatten\u_buf_b.$rtl/input_buffer.v:46$sub$561.
+  creating $alu model for $flatten\u_buf_b.$rtl/input_buffer.v:47$lt$564 ($lt): new $alu
+  creating $alu cell for $flatten\u_buf_b.$rtl/input_buffer.v:47$lt$564: $auto$alumacc.cc:578:replace_alu$874
+  creating $alu cell for $flatten\u_buf_b.$rtl/input_buffer.v:47$lt$556: $auto$alumacc.cc:578:replace_alu$881
+  creating $alu cell for $flatten\u_buf_b.$rtl/input_buffer.v:47$lt$548: $auto$alumacc.cc:578:replace_alu$888
+  creating $alu cell for $flatten\u_buf_b.$rtl/input_buffer.v:47$ge$546: $auto$alumacc.cc:578:replace_alu$893
+  creating $alu cell for $flatten\u_buf_b.$rtl/input_buffer.v:46$sub$553, $flatten\u_buf_b.$rtl/input_buffer.v:47$ge$554: $auto$alumacc.cc:578:replace_alu$906
+  creating $alu cell for $flatten\u_buf_b.$rtl/input_buffer.v:46$sub$561, $flatten\u_buf_b.$rtl/input_buffer.v:47$ge$562: $auto$alumacc.cc:578:replace_alu$919
+  creating $alu cell for $flatten\u_ctrl.$rtl/systolic_controller.v:48$add$601: $auto$alumacc.cc:578:replace_alu$932
+  creating $alu cell for $flatten\u_buf_a.$rtl/input_buffer.v:48$add$598: $auto$alumacc.cc:578:replace_alu$935
+  creating $alu cell for $flatten\u_buf_a.$rtl/input_buffer.v:48$add$591: $auto$alumacc.cc:578:replace_alu$938
+  created 9 $alu and 12 $macc cells.
+
+10.22. Executing OPT pass (performing simple optimizations).
+
+10.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+<suppressed ~5 debug messages>
+
+10.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 156 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Removed a total of 0 cells.
+
+10.22.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~19 debug messages>
+
+10.22.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_top.
+Performed a total of 0 changes.
+
+10.22.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 156 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Removed a total of 0 cells.
+
+10.22.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.22.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+Removed 14 unused cells and 36 unused wires.
+<suppressed ~34 debug messages>
+
+10.22.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+
+10.22.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.22.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~19 debug messages>
+
+10.22.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_top.
+Performed a total of 0 changes.
+
+10.22.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 141 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Removed a total of 0 cells.
+
+10.22.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.22.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+
+10.22.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+
+10.22.16. Finished fast OPT passes. (There is nothing left to do.)
+
+10.23. Executing MEMORY pass.
+
+10.23.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+10.23.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+10.23.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing systolic_top.u_buf_b.mem write port 0.
+  Analyzing systolic_top.u_buf_a.mem write port 0.
+
+10.23.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+10.23.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `\u_buf_b.mem'[0] in module `\systolic_top':
+    merging output FF to cell.
+    Write port 0: don't care on collision.
+Checking read port `\u_buf_b.mem'[1] in module `\systolic_top':
+    merging output FF to cell.
+    Write port 0: don't care on collision.
+Checking read port `\u_buf_b.mem'[2] in module `\systolic_top':
+    merging output FF to cell.
+    Write port 0: don't care on collision.
+Checking read port `\u_buf_a.mem'[0] in module `\systolic_top':
+    merging output FF to cell.
+    Write port 0: don't care on collision.
+Checking read port `\u_buf_a.mem'[1] in module `\systolic_top':
+    merging output FF to cell.
+    Write port 0: don't care on collision.
+Checking read port `\u_buf_a.mem'[2] in module `\systolic_top':
+    merging output FF to cell.
+    Write port 0: don't care on collision.
+
+10.23.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+Removed 6 unused cells and 54 unused wires.
+<suppressed ~7 debug messages>
+
+10.23.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+Consolidating read ports of memory systolic_top.u_buf_b.mem by address:
+Consolidating read ports of memory systolic_top.u_buf_a.mem by address:
+
+10.23.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+10.23.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+
+10.23.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+10.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+
+10.25. Executing MEMORY_LIBMAP pass (mapping memories to cells).
+using FF mapping for memory systolic_top.u_buf_b.mem
+using FF mapping for memory systolic_top.u_buf_a.mem
+<suppressed ~182 debug messages>
+
+10.26. Executing TECHMAP pass (map to technology primitives).
+
+10.26.1. Executing Verilog-2005 frontend: /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/brams_map.v
+Parsing Verilog input from `/opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/brams_map.v' to AST representation.
+Generating RTLIL representation for module `$__ICE40_RAM4K_'.
+Successfully finished Verilog frontend.
+
+10.26.2. Executing Verilog-2005 frontend: /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/spram_map.v
+Parsing Verilog input from `/opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/spram_map.v' to AST representation.
+Generating RTLIL representation for module `$__ICE40_SPRAM_'.
+Successfully finished Verilog frontend.
+
+10.26.3. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+10.27. Executing ICE40_BRAMINIT pass.
+
+10.28. Executing OPT pass (performing simple optimizations).
+
+10.28.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+<suppressed ~35 debug messages>
+
+10.28.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 121 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Removed a total of 0 cells.
+
+10.28.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.28.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+Removed 0 unused cells and 10 unused wires.
+<suppressed ~1 debug messages>
+
+10.28.5. Finished fast OPT passes.
+
+10.29. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \u_buf_b.mem in module \systolic_top:
+  created 9 $dff cells and 0 static cells of width 8.
+Extracted data FF from read port 0 of systolic_top.u_buf_b.mem: $\u_buf_b.mem$rdreg[0]
+Extracted data FF from read port 1 of systolic_top.u_buf_b.mem: $\u_buf_b.mem$rdreg[1]
+Extracted data FF from read port 2 of systolic_top.u_buf_b.mem: $\u_buf_b.mem$rdreg[2]
+  read interface: 3 $dff and 45 $mux cells.
+  write interface: 9 write mux blocks.
+Mapping memory \u_buf_a.mem in module \systolic_top:
+  created 9 $dff cells and 0 static cells of width 8.
+Extracted data FF from read port 0 of systolic_top.u_buf_a.mem: $\u_buf_a.mem$rdreg[0]
+Extracted data FF from read port 1 of systolic_top.u_buf_a.mem: $\u_buf_a.mem$rdreg[1]
+Extracted data FF from read port 2 of systolic_top.u_buf_a.mem: $\u_buf_a.mem$rdreg[2]
+  read interface: 3 $dff and 45 $mux cells.
+  write interface: 9 write mux blocks.
+
+10.30. Executing OPT pass (performing simple optimizations).
+
+10.30.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+<suppressed ~85 debug messages>
+
+10.30.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 283 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Removed a total of 0 cells.
+
+10.30.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~118 debug messages>
+
+10.30.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_top.
+Performed a total of 0 changes.
+
+10.30.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 283 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Computing hashes of 278 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+<suppressed ~15 debug messages>
+Removed a total of 5 cells.
+
+10.30.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.30.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+Removed 0 unused cells and 147 unused wires.
+<suppressed ~1 debug messages>
+
+10.30.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+
+10.30.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.30.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~128 debug messages>
+
+10.30.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_top.
+Performed a total of 0 changes.
+
+10.30.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 278 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Removed a total of 0 cells.
+
+10.30.13. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\u_buf_b.mem[0]$999 ($dff) from module systolic_top (D = \wr_data, Q = \u_buf_b.mem[0]).
+Adding EN signal on $memory\u_buf_b.mem[1]$1001 ($dff) from module systolic_top (D = \wr_data, Q = \u_buf_b.mem[1]).
+Adding EN signal on $memory\u_buf_b.mem[2]$1003 ($dff) from module systolic_top (D = \wr_data, Q = \u_buf_b.mem[2]).
+Adding EN signal on $memory\u_buf_b.mem[3]$1005 ($dff) from module systolic_top (D = \wr_data, Q = \u_buf_b.mem[3]).
+Adding EN signal on $memory\u_buf_b.mem[4]$1007 ($dff) from module systolic_top (D = \wr_data, Q = \u_buf_b.mem[4]).
+Adding EN signal on $memory\u_buf_b.mem[5]$1009 ($dff) from module systolic_top (D = \wr_data, Q = \u_buf_b.mem[5]).
+Adding EN signal on $memory\u_buf_b.mem[6]$1011 ($dff) from module systolic_top (D = \wr_data, Q = \u_buf_b.mem[6]).
+Adding EN signal on $memory\u_buf_b.mem[7]$1013 ($dff) from module systolic_top (D = \wr_data, Q = \u_buf_b.mem[7]).
+Adding EN signal on $memory\u_buf_b.mem[8]$1015 ($dff) from module systolic_top (D = \wr_data, Q = \u_buf_b.mem[8]).
+Adding EN signal on $memory\u_buf_a.mem[0]$1245 ($dff) from module systolic_top (D = \wr_data, Q = \u_buf_a.mem[0]).
+Adding EN signal on $memory\u_buf_a.mem[1]$1247 ($dff) from module systolic_top (D = \wr_data, Q = \u_buf_a.mem[1]).
+Adding EN signal on $memory\u_buf_a.mem[2]$1249 ($dff) from module systolic_top (D = \wr_data, Q = \u_buf_a.mem[2]).
+Adding EN signal on $memory\u_buf_a.mem[3]$1251 ($dff) from module systolic_top (D = \wr_data, Q = \u_buf_a.mem[3]).
+Adding EN signal on $memory\u_buf_a.mem[4]$1253 ($dff) from module systolic_top (D = \wr_data, Q = \u_buf_a.mem[4]).
+Adding EN signal on $memory\u_buf_a.mem[5]$1255 ($dff) from module systolic_top (D = \wr_data, Q = \u_buf_a.mem[5]).
+Adding EN signal on $memory\u_buf_a.mem[6]$1257 ($dff) from module systolic_top (D = \wr_data, Q = \u_buf_a.mem[6]).
+Adding EN signal on $memory\u_buf_a.mem[7]$1259 ($dff) from module systolic_top (D = \wr_data, Q = \u_buf_a.mem[7]).
+Adding EN signal on $memory\u_buf_a.mem[8]$1261 ($dff) from module systolic_top (D = \wr_data, Q = \u_buf_a.mem[8]).
+
+10.30.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+Removed 18 unused cells and 18 unused wires.
+<suppressed ~19 debug messages>
+
+10.30.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+
+10.30.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.30.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~92 debug messages>
+
+10.30.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_top.
+Performed a total of 0 changes.
+
+10.30.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 260 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Removed a total of 0 cells.
+
+10.30.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.30.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+
+10.30.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+
+10.30.23. Finished fast OPT passes. (There is nothing left to do.)
+
+10.31. Executing ICE40_WRAPCARRY pass (wrap carries).
+
+10.32. Executing TECHMAP pass (map to technology primitives).
+
+10.32.1. Executing Verilog-2005 frontend: /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+10.32.2. Executing Verilog-2005 frontend: /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/arith_map.v
+Parsing Verilog input from `/opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/arith_map.v' to AST representation.
+Generating RTLIL representation for module `\_80_ice40_alu'.
+Successfully finished Verilog frontend.
+
+10.32.3. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $sdffe.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $bmux.
+Using extmapper maccmap for cells of type $macc_v2.
+  add { $flatten\u_buf_a.$rtl/input_buffer.v:46$sub$592_Y [5:1] \u_ctrl.t [0] } * 3'011 (6x3 bits, signed)
+  add 4'0010 (4 bits, unsigned)
+  packed 2 (1) bits / 1 words into adder tree
+  add \u_array.g_row[1].g_col[0].u_pe.a_out * \u_array.g_row[0].g_col[1].u_pe.b_out (8x8 bits, signed)
+  add \u_array.g_row[1].g_col[1].u_pe.u_mac.acc (20 bits, signed)
+  add \u_buf_a.lanes [23:16] * \u_array.g_row[1].g_col[0].u_pe.b_out (8x8 bits, signed)
+  add \u_array.g_row[2].g_col[0].u_pe.u_mac.acc (20 bits, signed)
+  add $flatten\u_buf_a.$rtl/input_buffer.v:46$sub$585_Y [5:0] * 3'011 (6x3 bits, signed)
+  add 4'0001 (4 bits, unsigned)
+  packed 1 (1) bits / 1 words into adder tree
+  add \u_array.g_row[2].g_col[0].u_pe.a_out * \u_array.g_row[1].g_col[1].u_pe.b_out (8x8 bits, signed)
+  add \u_array.g_row[2].g_col[1].u_pe.u_mac.acc (20 bits, signed)
+  add \u_array.g_row[0].g_col[1].u_pe.a_out * \u_buf_b.lanes [23:16] (8x8 bits, signed)
+  add \u_array.g_row[0].g_col[2].u_pe.u_mac.acc (20 bits, signed)
+  add \u_array.g_row[1].g_col[1].u_pe.a_out * \u_array.g_row[0].g_col[2].u_pe.b_out (8x8 bits, signed)
+  add \u_array.g_row[1].g_col[2].u_pe.u_mac.acc (20 bits, signed)
+  add \u_ctrl.t * 2'11 (5x2 bits, unsigned)
+  add \u_buf_a.lanes [7:0] * \u_buf_b.lanes [7:0] (8x8 bits, signed)
+  add \u_array.g_row[0].g_col[0].u_pe.u_mac.acc (20 bits, signed)
+  add \u_array.g_row[0].g_col[0].u_pe.a_out * \u_buf_b.lanes [15:8] (8x8 bits, signed)
+  add \u_array.g_row[0].g_col[1].u_pe.u_mac.acc (20 bits, signed)
+  add \u_array.g_row[2].g_col[1].u_pe.a_out * \u_array.g_row[1].g_col[2].u_pe.b_out (8x8 bits, signed)
+  add \u_array.g_row[2].g_col[2].u_pe.u_mac.acc (20 bits, signed)
+  add \u_buf_a.lanes [15:8] * \u_array.g_row[0].g_col[0].u_pe.b_out (8x8 bits, signed)
+  add \u_array.g_row[1].g_col[0].u_pe.u_mac.acc (20 bits, signed)
+Using template $paramod$dde52db7035cb02b3cc5e73865788532339e3bcb\_80_ice40_alu for cells of type $alu.
+Using template $paramod$026a25b0ac8923e25340c48710b92fe5b83aead0\_80_ice40_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod$332fab4e157f868977379756d21fa99887c3c6c4\_80_ice40_alu for cells of type $alu.
+Using template $paramod$eae5c6d909a05153739c7821f34da2cbc0422532\_80_ice40_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $or.
+Using template $paramod$672a140277c71df8314410f22acc08d55222c3c7\_80_ice40_alu for cells of type $alu.
+Using template $paramod$619a7e60d42ca0996ea4b1b41bb5412f6a52141d\_80_ice40_alu for cells of type $alu.
+Using template $paramod$951377e52af94f063481e1cc0d2b0d04d4c16eb8\_80_ice40_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $pmux.
+Using extmapper simplemap for cells of type $logic_or.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000100 for cells of type $fa.
+Using template $paramod$740b056ede97228d3eae64ea2fdc81f0a33e0fe7\_80_ice40_alu for cells of type $alu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000010100 for cells of type $fa.
+Using template $paramod$6fc37af1c109ae54e8aed83fcd995c12d378ce93\_80_ice40_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $pos.
+No more expansions possible.
+<suppressed ~1132 debug messages>
+
+10.33. Executing OPT pass (performing simple optimizations).
+
+10.33.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+<suppressed ~2591 debug messages>
+
+10.33.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 8951 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Computing hashes of 8298 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Computing hashes of 7908 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Computing hashes of 7512 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Computing hashes of 7359 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Computing hashes of 7197 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Computing hashes of 7071 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Computing hashes of 7008 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Computing hashes of 6900 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+<suppressed ~6153 debug messages>
+Removed a total of 2051 cells.
+
+10.33.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.33.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+Removed 428 unused cells and 1175 unused wires.
+<suppressed ~429 debug messages>
+
+10.33.5. Finished fast OPT passes.
+
+10.34. Executing ICE40_OPT pass (performing simple optimizations).
+
+10.34.1. Running ICE40 specific optimizations.
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2546.slice[0].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2500.slice[0].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2454.slice[0].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2408.slice[0].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2362.slice[0].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2354.slice[0].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2308.slice[0].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2262.slice[0].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2216.slice[0].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2201.slice[0].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2155.slice[0].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2101.slice[0].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$alumacc.cc:578:replace_alu$938.slice[0].carry: CO=$auto$alumacc.cc:578:replace_alu$881.A [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$alumacc.cc:578:replace_alu$935.slice[0].carry: CO=$auto$alumacc.cc:578:replace_alu$874.A [1]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$alumacc.cc:578:replace_alu$932.slice[0].carry: CO=\u_ctrl.t [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$alumacc.cc:578:replace_alu$888.slice[0].carry: CO=\u_ctrl.t [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$alumacc.cc:578:replace_alu$881.slice[0].carry: CO=$auto$alumacc.cc:578:replace_alu$881.A [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$alumacc.cc:578:replace_alu$906.slice[0].carry: CO=\u_ctrl.t [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$alumacc.cc:578:replace_alu$906.slice[5].carry: CO=$auto$alumacc.cc:578:replace_alu$906.C [5]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$alumacc.cc:578:replace_alu$874.slice[0].carry: CO=\u_ctrl.t [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$alumacc.cc:578:replace_alu$919.slice[0].carry: CO=\u_ctrl.t [1]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$alumacc.cc:578:replace_alu$919.slice[4].carry: CO=$auto$alumacc.cc:578:replace_alu$919.C [4]
+
+10.34.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+<suppressed ~244 debug messages>
+
+10.34.3. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 6228 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Computing hashes of 6225 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Computing hashes of 6192 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+<suppressed ~108 debug messages>
+Removed a total of 36 cells.
+
+10.34.4. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.34.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+Removed 53 unused cells and 59 unused wires.
+<suppressed ~54 debug messages>
+
+10.34.6. Rerunning OPT passes. (Removed registers in this run.)
+
+10.34.7. Running ICE40 specific optimizations.
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2546.slice[1].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2500.slice[1].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2454.slice[1].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2408.slice[1].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2354.slice[1].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2308.slice[1].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2262.slice[1].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2201.slice[1].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2155.slice[1].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2101.slice[1].carry: CO=1'0
+
+10.34.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+
+10.34.9. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 6139 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Removed a total of 0 cells.
+
+10.34.10. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.34.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+
+10.34.12. Rerunning OPT passes. (Removed registers in this run.)
+
+10.34.13. Running ICE40 specific optimizations.
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2546.slice[2].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2500.slice[2].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2454.slice[2].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2408.slice[2].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2354.slice[2].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2308.slice[2].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2262.slice[2].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2201.slice[2].carry: CO=1'0
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) systolic_top.$auto$maccmap.cc:240:synth$2155.slice[2].carry: CO=1'0
+
+10.34.14. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+
+10.34.15. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 6139 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Removed a total of 0 cells.
+
+10.34.16. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.34.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+
+10.34.18. Rerunning OPT passes. (Removed registers in this run.)
+
+10.34.19. Running ICE40 specific optimizations.
+
+10.34.20. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+
+10.34.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 6139 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Removed a total of 0 cells.
+
+10.34.22. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.34.23. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+
+10.34.24. Finished OPT passes. (There is nothing left to do.)
+
+10.35. Executing DFFLEGALIZE pass (convert FFs and LATCHes to types supported by the target).
+
+10.36. Executing TECHMAP pass (map to technology primitives).
+
+10.36.1. Executing Verilog-2005 frontend: /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/ff_map.v
+Parsing Verilog input from `/opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/ff_map.v' to AST representation.
+Generating RTLIL representation for module `$_DFF_N_'.
+Generating RTLIL representation for module `$_DFF_P_'.
+Generating RTLIL representation for module `$_DFFE_NP_'.
+Generating RTLIL representation for module `$_DFFE_PP_'.
+Generating RTLIL representation for module `$_DFF_NP0_'.
+Generating RTLIL representation for module `$_DFF_NP1_'.
+Generating RTLIL representation for module `$_DFF_PP0_'.
+Generating RTLIL representation for module `$_DFF_PP1_'.
+Generating RTLIL representation for module `$_DFFE_NP0P_'.
+Generating RTLIL representation for module `$_DFFE_NP1P_'.
+Generating RTLIL representation for module `$_DFFE_PP0P_'.
+Generating RTLIL representation for module `$_DFFE_PP1P_'.
+Generating RTLIL representation for module `$_SDFF_NP0_'.
+Generating RTLIL representation for module `$_SDFF_NP1_'.
+Generating RTLIL representation for module `$_SDFF_PP0_'.
+Generating RTLIL representation for module `$_SDFF_PP1_'.
+Generating RTLIL representation for module `$_SDFFCE_NP0P_'.
+Generating RTLIL representation for module `$_SDFFCE_NP1P_'.
+Generating RTLIL representation for module `$_SDFFCE_PP0P_'.
+Generating RTLIL representation for module `$_SDFFCE_PP1P_'.
+Successfully finished Verilog frontend.
+
+10.36.2. Continuing TECHMAP pass.
+Using template $_SDFFCE_PP0P_ for cells of type $_SDFFCE_PP0P_.
+Using template $_SDFF_PP0_ for cells of type $_SDFF_PP0_.
+Using template $_DFFE_PP_ for cells of type $_DFFE_PP_.
+No more expansions possible.
+<suppressed ~678 debug messages>
+
+10.37. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+
+10.38. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+Mapping systolic_top.$auto$alumacc.cc:578:replace_alu$888.slice[0].carry ($lut).
+Mapping systolic_top.$auto$alumacc.cc:578:replace_alu$906.slice[5].carry ($lut).
+Mapping systolic_top.$auto$alumacc.cc:578:replace_alu$919.slice[0].carry ($lut).
+Mapping systolic_top.$auto$alumacc.cc:578:replace_alu$919.slice[4].carry ($lut).
+Mapping systolic_top.$auto$alumacc.cc:578:replace_alu$932.slice[0].carry ($lut).
+Mapping systolic_top.$auto$alumacc.cc:578:replace_alu$935.slice[0].carry ($lut).
+Mapping systolic_top.$auto$alumacc.cc:578:replace_alu$938.slice[0].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2101.slice[1].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2155.slice[0].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2155.slice[1].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2155.slice[2].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2201.slice[0].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2201.slice[1].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2201.slice[2].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2216.slice[0].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2262.slice[0].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2262.slice[1].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2262.slice[2].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2308.slice[0].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2308.slice[1].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2308.slice[2].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2354.slice[0].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2354.slice[1].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2354.slice[2].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2362.slice[0].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2408.slice[0].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2408.slice[1].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2408.slice[2].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2454.slice[0].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2454.slice[1].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2454.slice[2].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2500.slice[0].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2500.slice[1].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2500.slice[2].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2546.slice[0].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2546.slice[1].carry ($lut).
+Mapping systolic_top.$auto$maccmap.cc:240:synth$2546.slice[2].carry ($lut).
+
+10.39. Executing ICE40_OPT pass (performing simple optimizations).
+
+10.39.1. Running ICE40 specific optimizations.
+
+10.39.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+<suppressed ~501 debug messages>
+
+10.39.3. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 6631 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Computing hashes of 6052 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+<suppressed ~1737 debug messages>
+Removed a total of 579 cells.
+
+10.39.4. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.39.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+Removed 28 unused cells and 4368 unused wires.
+<suppressed ~29 debug messages>
+
+10.39.6. Rerunning OPT passes. (Removed registers in this run.)
+
+10.39.7. Running ICE40 specific optimizations.
+
+10.39.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+
+10.39.9. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 6024 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Removed a total of 0 cells.
+
+10.39.10. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.39.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+
+10.39.12. Finished OPT passes. (There is nothing left to do.)
+
+10.40. Executing CHECK pass (checking for obvious problems).
+Checking module systolic_top...
+Found and reported 0 problems.
+
+10.41. Executing TECHMAP pass (map to technology primitives).
+
+10.41.1. Executing Verilog-2005 frontend: /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/latches_map.v
+Parsing Verilog input from `/opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/latches_map.v' to AST representation.
+Generating RTLIL representation for module `$_DLATCH_N_'.
+Generating RTLIL representation for module `$_DLATCH_P_'.
+Successfully finished Verilog frontend.
+
+10.41.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+10.42. Executing Verilog-2005 frontend: /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/abc9_model.v
+Parsing Verilog input from `/opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/abc9_model.v' to AST representation.
+Generating RTLIL representation for module `$__ICE40_CARRY_WRAPPER'.
+Successfully finished Verilog frontend.
+
+10.43. Executing ABC9 pass.
+
+10.43.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+10.43.2. Executing ABC9_OPS pass (helper functions for ABC9).
+
+10.43.3. Executing SCC pass (detecting logic loops).
+Found 0 SCCs in module systolic_top.
+Found 0 SCCs.
+
+10.43.4. Executing ABC9_OPS pass (helper functions for ABC9).
+
+10.43.5. Executing TECHMAP pass (map to technology primitives).
+
+10.43.5.1. Executing Verilog-2005 frontend: /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+10.43.5.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~130 debug messages>
+
+10.43.6. Executing OPT pass (performing simple optimizations).
+
+10.43.6.1. Executing OPT_EXPR pass (perform const folding).
+
+10.43.6.2. Executing OPT_MERGE pass (detect identical cells).
+Removed a total of 0 cells.
+
+10.43.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Removed 0 multiplexer ports.
+
+10.43.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+Performed a total of 0 changes.
+
+10.43.6.5. Executing OPT_MERGE pass (detect identical cells).
+Removed a total of 0 cells.
+
+10.43.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.43.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+
+10.43.6.8. Executing OPT_EXPR pass (perform const folding).
+
+10.43.6.9. Finished fast OPT passes. (There is nothing left to do.)
+
+10.43.7. Executing TECHMAP pass (map to technology primitives).
+
+10.43.7.1. Executing Verilog-2005 frontend: /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/abc9_map.v
+Parsing Verilog input from `/opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/abc9_map.v' to AST representation.
+Lexer warning: The SystemVerilog keyword `bit' (at /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/abc9_map.v:35) is not recognized unless read_verilog is called with -sv!
+Generating RTLIL representation for module `$__ABC9_BARRIER_MAP'.
+Successfully finished Verilog frontend.
+
+10.43.7.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+10.43.8. Executing Verilog-2005 frontend: /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/abc9_model.v
+Parsing Verilog input from `/opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/abc9_model.v' to AST representation.
+Generating RTLIL representation for module `$__ABC9_DELAY'.
+Generating RTLIL representation for module `$__ABC9_BARRIER'.
+Generating RTLIL representation for module `$__ABC9_SCC_BREAKER'.
+Generating RTLIL representation for module `$__DFF_N__$abc9_flop'.
+Generating RTLIL representation for module `$__DFF_P__$abc9_flop'.
+Successfully finished Verilog frontend.
+
+10.43.9. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~1170 debug messages>
+
+10.43.10. Executing ABC9_OPS pass (helper functions for ABC9).
+
+10.43.11. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~2 debug messages>
+
+10.43.12. Executing TECHMAP pass (map to technology primitives).
+
+10.43.12.1. Executing Verilog-2005 frontend: /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+10.43.12.2. Continuing TECHMAP pass.
+Using template $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1 for cells of type $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1.
+Using template $paramod\SB_LUT4\LUT_INIT=16'0110100110010110 for cells of type SB_LUT4.
+Using template SB_CARRY for cells of type SB_CARRY.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_or.
+No more expansions possible.
+<suppressed ~151 debug messages>
+
+10.43.13. Executing OPT pass (performing simple optimizations).
+
+10.43.13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+<suppressed ~4 debug messages>
+
+10.43.13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 30 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Computing hashes of 20 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Computing hashes of 18 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+<suppressed ~29 debug messages>
+Removed a total of 12 cells.
+
+10.43.13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+10.43.13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_top.
+Performed a total of 0 changes.
+
+10.43.13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 18 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Removed a total of 0 cells.
+
+10.43.13.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.43.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+Removed 0 unused cells and 24 unused wires.
+<suppressed ~1 debug messages>
+
+10.43.13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+
+10.43.13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.43.13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+10.43.13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_top.
+Performed a total of 0 changes.
+
+10.43.13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_top'.
+Computing hashes of 18 cells of `\systolic_top'.
+Finding duplicate cells in `\systolic_top'.
+Removed a total of 0 cells.
+
+10.43.13.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.43.13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_top..
+
+10.43.13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_top.
+
+10.43.13.16. Finished fast OPT passes. (There is nothing left to do.)
+
+10.43.14. Executing AIGMAP pass (map logic to AIG).
+Module systolic_top: replaced 2825 cells with 17513 new cells, skipped 4367 cells.
+  replaced 3 cell types:
+     405 $_MUX_
+     754 $_OR_
+    1666 $_XOR_
+  not replaced 9 cell types:
+    2229 $_AND_
+     100 $_NOT_
+      23 $scopeinfo
+     191 $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1
+     512 $paramod$__ABC9_DELAY\DELAY=32'00000000000000000000000011001011
+     656 $paramod$__ABC9_DELAY\DELAY=32'00000000000000000000000000010101
+     144 SB_DFFE
+      48 SB_DFFSR
+     464 SB_DFFESR
+
+10.43.14.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+10.43.14.2. Executing ABC9_OPS pass (helper functions for ABC9).
+
+10.43.14.3. Executing XAIGER2 backend.
+<suppressed ~2034 debug messages>
+Extracted 11414 AND gates and 0 wires from module `systolic_top' to a netlist network with 2227 inputs and 4595 outputs.
+
+10.43.14.4. Executing ABC9_EXE pass (technology mapping using ABC9).
+
+10.43.14.5. Executing ABC9.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_lut <abc-temp-dir>/input.lut 
+ABC: + read_box <abc-temp-dir>/input.box 
+ABC: + &read <abc-temp-dir>/input.xaig 
+ABC: + &ps 
+ABC: <abc-temp-dir>/input : i/o =    677/   2472  and =    7588  lev =   21 (2.16)  mem = 0.19 MB  box = 1359  bb = 1168
+ABC: Warning: AIG with boxes has internal fanout in 0 complex flops and 2 carries.
+ABC: + &scorr 
+ABC: Warning: The network is combinational.
+ABC: + &sweep 
+ABC: + &dc2 
+ABC: + &dch -f -r 
+ABC: + &ps 
+ABC: <abc-temp-dir>/input : i/o =    677/   2472  and =    9149  lev =   21 (2.07)  mem = 0.21 MB  ch =  634  box = 1359  bb = 1168
+ABC: cst =       0  cls =    623  lit =     634  unused =   10119  proof =     0
+ABC: + &if -W 250 -v 
+ABC: K = 4. Memory (bytes): Truth =    0. Cut =   64. Obj =  144. Set =  672. CutMin = no
+ABC: Node =    9149.  Ch =   623.  Total mem =    2.44 MB. Peak cut mem =    0.04 MB.
+ABC: P:  Del = 5693.00.  Ar =    2793.0.  Edge =     9739.  Cut =    77363.  T =     0.01 sec
+ABC: P:  Del = 5693.00.  Ar =    2742.0.  Edge =     9687.  Cut =    75874.  T =     0.01 sec
+ABC: P:  Del = 5693.00.  Ar =    2814.0.  Edge =     9271.  Cut =    78664.  T =     0.01 sec
+ABC: F:  Del = 5693.00.  Ar =    2569.0.  Edge =     8843.  Cut =    66366.  T =     0.01 sec
+ABC: A:  Del = 5693.00.  Ar =    2517.0.  Edge =     8356.  Cut =    68010.  T =     0.01 sec
+ABC: A:  Del = 5693.00.  Ar =    2517.0.  Edge =     8356.  Cut =    69030.  T =     0.01 sec
+ABC: Total time =     0.07 sec
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + &mfs 
+ABC: + &ps -l 
+ABC: <abc-temp-dir>/input : i/o =    677/   2472  and =   13989  lev =   23 (2.05)  mem = 0.27 MB  box = 1359  bb = 1168
+ABC: Mapping (K=4)  :  lut =   2443  edge =    8095  lev =    7 (0.88)  levB =   23  mem = 0.13 MB
+ABC: LUT = 2443 : 2=465 19.0 %  3=747 30.6 %  4=1231 50.4 %  Ave = 3.31
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + &verify 
+ABC: Networks are equivalent.  Time =     0.26 sec
+ABC: + time 
+ABC: elapse: 3.56 seconds, total: 3.56 seconds
+
+10.43.14.6. Executing AIGER frontend.
+<suppressed ~10 debug messages>
+Removed 24618 unused cells and 30181 unused wires.
+
+10.43.14.7. Executing ABC_OPS_REINTEGRATE pass (reintegrate ABC mapped design into module).
+ABC RESULTS:              $lut cells:     2448
+ABC RESULTS:   $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1 cells:      191
+ABC RESULTS:           input signals:       34
+ABC RESULTS:          output signals:        3
+<suppressed ~3149 debug messages>
+Removing temp directory.
+
+10.43.15. Executing TECHMAP pass (map to technology primitives).
+
+10.43.15.1. Executing Verilog-2005 frontend: /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/abc9_unmap.v
+Parsing Verilog input from `/opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/abc9_unmap.v' to AST representation.
+Generating RTLIL representation for module `$__DFF_x__$abc9_flop'.
+Generating RTLIL representation for module `$__ABC9_SCC_BREAKER'.
+Generating RTLIL representation for module `$__ABC9_BARRIER'.
+Successfully finished Verilog frontend.
+
+10.43.15.2. Continuing TECHMAP pass.
+Using template $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1 for cells of type $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1.
+No more expansions possible.
+<suppressed ~198 debug messages>
+
+10.44. Executing ICE40_WRAPCARRY pass (wrap carries).
+
+10.45. Executing TECHMAP pass (map to technology primitives).
+
+10.45.1. Executing Verilog-2005 frontend: /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/ff_map.v
+Parsing Verilog input from `/opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/ff_map.v' to AST representation.
+Generating RTLIL representation for module `$_DFF_N_'.
+Generating RTLIL representation for module `$_DFF_P_'.
+Generating RTLIL representation for module `$_DFFE_NP_'.
+Generating RTLIL representation for module `$_DFFE_PP_'.
+Generating RTLIL representation for module `$_DFF_NP0_'.
+Generating RTLIL representation for module `$_DFF_NP1_'.
+Generating RTLIL representation for module `$_DFF_PP0_'.
+Generating RTLIL representation for module `$_DFF_PP1_'.
+Generating RTLIL representation for module `$_DFFE_NP0P_'.
+Generating RTLIL representation for module `$_DFFE_NP1P_'.
+Generating RTLIL representation for module `$_DFFE_PP0P_'.
+Generating RTLIL representation for module `$_DFFE_PP1P_'.
+Generating RTLIL representation for module `$_SDFF_NP0_'.
+Generating RTLIL representation for module `$_SDFF_NP1_'.
+Generating RTLIL representation for module `$_SDFF_PP0_'.
+Generating RTLIL representation for module `$_SDFF_PP1_'.
+Generating RTLIL representation for module `$_SDFFCE_NP0P_'.
+Generating RTLIL representation for module `$_SDFFCE_NP1P_'.
+Generating RTLIL representation for module `$_SDFFCE_PP0P_'.
+Generating RTLIL representation for module `$_SDFFCE_PP1P_'.
+Successfully finished Verilog frontend.
+
+10.45.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~22 debug messages>
+Removed 267 unused cells and 6969 unused wires.
+
+10.46. Executing OPT_LUT pass (optimize LUTs).
+Discovering LUTs.
+Number of LUTs:     2620
+  1-LUT                6
+  2-LUT              470
+  3-LUT              912
+  4-LUT             1232
+  with \SB_CARRY    (#0)  153
+  with \SB_CARRY    (#1)  161
+
+Eliminating LUTs.
+Number of LUTs:     2620
+  1-LUT                6
+  2-LUT              470
+  3-LUT              912
+  4-LUT             1232
+  with \SB_CARRY    (#0)  153
+  with \SB_CARRY    (#1)  161
+
+Combining LUTs.
+Number of LUTs:     2603
+  1-LUT                4
+  2-LUT              454
+  3-LUT              901
+  4-LUT             1244
+  with \SB_CARRY    (#0)  153
+  with \SB_CARRY    (#1)  161
+
+Eliminated 0 LUTs.
+Combined 17 LUTs.
+<suppressed ~7654 debug messages>
+
+10.47. Executing TECHMAP pass (map to technology primitives).
+
+10.47.1. Executing Verilog-2005 frontend: /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/cells_map.v
+Parsing Verilog input from `/opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/cells_map.v' to AST representation.
+Generating RTLIL representation for module `$lut'.
+Successfully finished Verilog frontend.
+
+10.47.2. Continuing TECHMAP pass.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01100000 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000111 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1000 for cells of type $lut.
+Using template $paramod$e3f0f1b1a91dadf82d87013c252f9f5fc0dc6888$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0010 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
+Using template $paramod$ab8bb87959c5d7cfa27886cee1355b38e054a61a$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11001011 for cells of type $lut.
+Using template $paramod$da2f95476331ffa2143f8212db8aff730de806a0$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10101100 for cells of type $lut.
+Using template $paramod$5b70de4dbb323ec22c925aa2fcc3326145cab098$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00001011 for cells of type $lut.
+Using template $paramod$c75f9d19593d4e665bc34da412026320b8b7a809$lut for cells of type $lut.
+Using template $paramod$519b6e2dbfd66920b2d4aeae7cc975bcfc27990a$lut for cells of type $lut.
+Using template $paramod$442555ef8d9a9002a42997c4ef67f8ce2c2e7ef2$lut for cells of type $lut.
+Using template $paramod$729aa850e969bb9bb1c205734876853e142656d4$lut for cells of type $lut.
+Using template $paramod$fd904e9e35cfd343a9df248824bd3f1408724879$lut for cells of type $lut.
+Using template $paramod$4282def8dbd6df3d1248ad282c629bee684502c2$lut for cells of type $lut.
+Using template $paramod$c92106469089edeb8ad4d6daf5067879a8f6ba9f$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00000100 for cells of type $lut.
+Using template $paramod$1b4dd6457d07f8f165ec99061b8d6c5023635c5b$lut for cells of type $lut.
+Using template $paramod$de227565265d89833888af44fb8afd928657dd5d$lut for cells of type $lut.
+Using template $paramod$9d707d218adbd63b6f9a0c79d7ee037306fb6296$lut for cells of type $lut.
+Using template $paramod$571404c0889eaf57f492cb5e37f8acb5df5852f9$lut for cells of type $lut.
+Using template $paramod$08a5251094e6791f0c6a19a79c33ed46d064f1e7$lut for cells of type $lut.
+Using template $paramod$1b53a9695a0f80de7517b50863b438fd2b7f56da$lut for cells of type $lut.
+Using template $paramod$e04c7b7d781e7e09c4ea1cf75b335e306e336d46$lut for cells of type $lut.
+Using template $paramod$682dcf7a44e09cdf417bc55247ac658426f4c8e6$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01111000 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00010111 for cells of type $lut.
+Using template $paramod$dcfc23e7d6bcd26b82233688fdfbe92480ddfdcf$lut for cells of type $lut.
+Using template $paramod$168aeef333136ff4f1f2ce3a62c8b6d1ffc7dc28$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00101000 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1001 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01101001 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000000 for cells of type $lut.
+Using template $paramod$b2077130d89736f5191d0d24f7f6ffd3bddb0a2d$lut for cells of type $lut.
+Using template $paramod$61af77eed7f358aa49c13132fc0b60ac3ba6c211$lut for cells of type $lut.
+Using template $paramod$c01d1f1a2c22a23f58c65a92a9c94eaeebcde834$lut for cells of type $lut.
+Using template $paramod$ff7561cfb7d3ae7112e6974b98c96c3d891737ce$lut for cells of type $lut.
+Using template $paramod$718208d0d7c444e4924e09c40d40e7ac2bd4dfe6$lut for cells of type $lut.
+Using template $paramod$8cc3490ab42a63312b8ab36121eb7c9227093866$lut for cells of type $lut.
+Using template $paramod$7996097aa7e74872f48a5ea7d10d2b685895e6b4$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0110 for cells of type $lut.
+Using template $paramod$d6b00b06719051e8e0d21d321c25f50651e7dd46$lut for cells of type $lut.
+Using template $paramod$868427562418b5dc988caeac6a54689ec9c9025e$lut for cells of type $lut.
+Using template $paramod$3fd12db03aeee29b04c450792ea328ef1bb1f18d$lut for cells of type $lut.
+Using template $paramod$153c6cdaaddbc43e6ef3facd06aa851de33910ae$lut for cells of type $lut.
+Using template $paramod$e87c652d68339e0a13e8ac3dd39fd0a21e0079b7$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01110001 for cells of type $lut.
+Using template $paramod$acf49cb7bd2805dee4b4ebb218aa5924b1be7704$lut for cells of type $lut.
+Using template $paramod$949ab4ee77faf22e524918cd9a31c66dd6f7ec0c$lut for cells of type $lut.
+Using template $paramod$60c57a531d15ac3dc4cc2d9845c81479cc8e53ec$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00011011 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11000110 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00001101 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10010110 for cells of type $lut.
+Using template $paramod$45bc8a035811672fb24512b03898abf475979d07$lut for cells of type $lut.
+Using template $paramod$f1029f646005abda698426a043a7c8fe4e2bd078$lut for cells of type $lut.
+Using template $paramod$5aade32a42eeea80d52be580c6f168f2efa73bd2$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01001011 for cells of type $lut.
+Using template $paramod$51adb1afea57a9560b9534400e9af12cb2df0ba0$lut for cells of type $lut.
+Using template $paramod$f43bf15400946f565ec15cd72d115c6878b68aca$lut for cells of type $lut.
+Using template $paramod$96fc790ea1a29edc883104621d804fc27b319b43$lut for cells of type $lut.
+Using template $paramod$5249da6f2b2541b723a755a0c67053858fe544a6$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11011000 for cells of type $lut.
+Using template $paramod$74db7ebdc203ab2b8e34f5d81b5d1b49c6ee3ec6$lut for cells of type $lut.
+Using template $paramod$8466aae7f3132f822e70bbd8738850d820750479$lut for cells of type $lut.
+Using template $paramod$a63d84c9dd26caf4e75c7cc2f6f70f64a5b14aa1$lut for cells of type $lut.
+Using template $paramod$239a649c3c5dcff42e28a38401931acf401ef810$lut for cells of type $lut.
+Using template $paramod$70aaf70eb32e221098b6eb52bf2b64b3c0b4a0fb$lut for cells of type $lut.
+Using template $paramod$78e1751931755f088c8bc676bcbc3bb642c26bfc$lut for cells of type $lut.
+Using template $paramod$5183b4454493323aca6310872659274580528fcf$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00000010 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000100 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10010000 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10001110 for cells of type $lut.
+Using template $paramod$2991a9166162362f9843a52417028067813fc539$lut for cells of type $lut.
+Using template $paramod$8bb166fd629c8a07817031e8169d2a1d4ad22103$lut for cells of type $lut.
+Using template $paramod$480632dc6f7c037df6062cf8bf88300b5262c395$lut for cells of type $lut.
+Using template $paramod$3fbf9e179448527cc5870685155541058c0f9f7a$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00101101 for cells of type $lut.
+Using template $paramod$dd04db71dd446d0caaf01be10c27ff36f1a03004$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00000111 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0001 for cells of type $lut.
+Using template $paramod$4ac73e90cabe3fd5423b3897754e1be51d1645fa$lut for cells of type $lut.
+Using template $paramod$d6ca727e39f31d51d29072e0f33aa09c65e37336$lut for cells of type $lut.
+Using template $paramod$0b748f5ac25a27a03a5499a627421309991c9040$lut for cells of type $lut.
+Using template $paramod$b9d8b7e91a2c68da033af948ea0bd8bdebbaf6b2$lut for cells of type $lut.
+Using template $paramod$3a0b4cdedfd1d4a50b6128c5b34eaf4295ec8865$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00101011 for cells of type $lut.
+Using template $paramod$9fc14cb0ba5120a1da0c687a9fb19472f206fdfe$lut for cells of type $lut.
+Using template $paramod$e9f71582696849081fb79e4580214a5c109ded04$lut for cells of type $lut.
+Using template $paramod$59f101390372f254975096e1b2fa197911091d09$lut for cells of type $lut.
+Using template $paramod$0e3b92163337f2e219624ed5cc4f8fbb4537d621$lut for cells of type $lut.
+Using template $paramod$106bfe8391f9a1c1dc532f80c58e77fd15172d43$lut for cells of type $lut.
+Using template $paramod$679c0497bd344cd028193ec8906efb780eb00cd8$lut for cells of type $lut.
+Using template $paramod$8fbefeb634a4a275ce7207ab33dd7f7b52a837d6$lut for cells of type $lut.
+Using template $paramod$feac1814a13647ff95d85e23385825c648d6c2ee$lut for cells of type $lut.
+Using template $paramod$f375c8d0fcc7e63b00bc5e37f6be0530ba82d9b0$lut for cells of type $lut.
+Using template $paramod$e51a8a571bee774247b38f52d6e85fd62ae52cea$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01001100 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1110 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00000001 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00000110 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00110101 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11100100 for cells of type $lut.
+Using template $paramod$8b24407096beec47292ddeb1567a058197a320b9$lut for cells of type $lut.
+Using template $paramod$8fd8efe0a495790cc9ddc97266933ea8a8cd7b45$lut for cells of type $lut.
+Using template $paramod$9e394303e290a474880b56f98766417009256d93$lut for cells of type $lut.
+Using template $paramod$973818279bc95792902f3c09371fd2407d04a2a5$lut for cells of type $lut.
+Using template $paramod$7491e7206ae8c682d288373efe06a43b67c277cf$lut for cells of type $lut.
+Using template $paramod$e6a488add0b5a2d742e2ae29f62ce7616e04271d$lut for cells of type $lut.
+Using template $paramod$2955ab75367a3dc9d6f50d3655eebcd4f615031f$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00001000 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10111000 for cells of type $lut.
+Using template $paramod$bacdb2105cbfbe75cfbcc2fb021fd3aba864526b$lut for cells of type $lut.
+Using template $paramod$c7754eeb17b54dfe53ea4a973db3714d78ced2f9$lut for cells of type $lut.
+Using template $paramod$db08fd84fb3c4d6a41eaec6adfffe445fb7eb17f$lut for cells of type $lut.
+Using template $paramod$6d6beead1425af15cf78b27fd9b11b41b5d4bce8$lut for cells of type $lut.
+Using template $paramod$364c9ffbffac467d60dfec81bba4e18476c15602$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01101100 for cells of type $lut.
+Using template $paramod$c93083768903e88c37e0c9b82fead370b0886961$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11100001 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01101010 for cells of type $lut.
+Using template $paramod$47b2f5a9f58cb4be072657772748a1ab82d6819a$lut for cells of type $lut.
+Using template $paramod$58685d136f916910674b7cdb559b8c116c3484e1$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11111000 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11101111 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10001011 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10101011 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1101 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1011 for cells of type $lut.
+No more expansions possible.
+<suppressed ~4080 debug messages>
+Removed 0 unused cells and 6396 unused wires.
+
+10.48. Executing AUTONAME pass.
+Renamed 5013 objects in module systolic_top.
+<suppressed ~5013 debug messages>
+
+10.49. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `systolic_top'. Setting top module to systolic_top.
+
+10.49.1. Analyzing design hierarchy..
+Top module:  \systolic_top
+
+10.49.2. Analyzing design hierarchy..
+Top module:  \systolic_top
+Removed 0 unused modules.
+
+10.50. Printing statistics.
+
+=== systolic_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     1624 wires
+     5180 wire bits
+     1624 public wires
+     5180 public wire bits
+       11 ports
+       43 port bits
+       23 cells
+       23   $scopeinfo
+     3432 submodules
+      173   SB_CARRY
+      144   SB_DFFE
+      464   SB_DFFESR
+       48   SB_DFFSR
+     2603   SB_LUT4
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+       23 systolic_top
+
+        +----------Count including submodules.
+        | 
+     1624 wires
+     5180 wire bits
+     1624 public wires
+     5180 public wire bits
+       11 ports
+       43 port bits
+        - memories
+        - memory bits
+        - processes
+       23 cells
+       23   $scopeinfo
+     3432 submodules
+      173   SB_CARRY
+      144   SB_DFFE
+      464   SB_DFFESR
+       48   SB_DFFSR
+     2603   SB_LUT4
+
+10.51. Executing CHECK pass (checking for obvious problems).
+Checking module systolic_top...
+Found and reported 0 problems.
+
+10.52. Executing JSON backend.
+
+End of script. Logfile hash: 730b452df6, time: 5.05s, user: 1.55s, system: 0.06s, MEM: 88.00 MB peak
+Yosys 0.71+post (git sha1 5628c13240f670b97aaaca3d47940c4afb8ff572, Release, AppleClang clang++ 21.0.0.21000401)
+Time spent: 69% 1x abc9_exe (3 sec), 6% 31x opt_expr (0 sec), ...

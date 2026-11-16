@@ -1,0 +1,136 @@
+[
+  {
+    "design": "systolic_top",
+    "N": 2,
+    "xc7": {
+      "LUT": 38,
+      "FF": 119,
+      "DSP48E1": 4,
+      "CARRY4": 3,
+      "LUTRAM_cells": 8
+    },
+    "ice40": {
+      "LC": 1314,
+      "LC_avail": 7680,
+      "IO": 39,
+      "Fmax_MHz": 86.79
+    },
+    "cycles": 8
+  },
+  {
+    "design": "systolic_top",
+    "N": 3,
+    "xc7": {
+      "LUT": 90,
+      "FF": 236,
+      "DSP48E1": 9,
+      "CARRY4": 9,
+      "LUTRAM_cells": 8
+    },
+    "ice40": {
+      "LC": 3051,
+      "LC_avail": 7680,
+      "IO": 43,
+      "Fmax_MHz": 82.77
+    },
+    "cycles": 11
+  },
+  {
+    "design": "systolic_top",
+    "N": 4,
+    "xc7": {
+      "LUT": 137,
+      "FF": 456,
+      "DSP48E1": 16,
+      "CARRY4": 8,
+      "LUTRAM_cells": 16
+    },
+    "ice40": {
+      "LC": 5430,
+      "LC_avail": 7680,
+      "IO": 43,
+      "Fmax_MHz": 79.23
+    },
+    "cycles": 14
+  },
+  {
+    "design": "systolic_top",
+    "N": 8,
+    "xc7": {
+      "LUT": 500,
+      "FF": 2057,
+      "DSP48E1": 64,
+      "CARRY4": 20,
+      "LUTRAM_cells": 48
+    },
+    "ice40": null,
+    "cycles": 26
+  },
+  {
+    "design": "seq_matmul",
+    "N": 2,
+    "xc7": {
+      "LUT": 55,
+      "FF": 31,
+      "DSP48E1": 1,
+      "CARRY4": 5,
+      "LUTRAM_cells": 24
+    },
+    "ice40": {
+      "LC": 486,
+      "LC_avail": 7680,
+      "IO": 39,
+      "Fmax_MHz": 62.06
+    },
+    "cycles": 11
+  },
+  {
+    "design": "seq_matmul",
+    "N": 3,
+    "xc7": {
+      "LUT": 72,
+      "FF": 36,
+      "DSP48E1": 1,
+      "CARRY4": 9,
+      "LUTRAM_cells": 24
+    },
+    "ice40": {
+      "LC": 893,
+      "LC_avail": 7680,
+      "IO": 43,
+      "Fmax_MHz": 57.21
+    },
+    "cycles": 30
+  },
+  {
+    "design": "seq_matmul",
+    "N": 4,
+    "xc7": {
+      "LUT": 59,
+      "FF": 36,
+      "DSP48E1": 1,
+      "CARRY4": 5,
+      "LUTRAM_cells": 24
+    },
+    "ice40": {
+      "LC": 1360,
+      "LC_avail": 7680,
+      "IO": 43,
+      "Fmax_MHz": 58.07
+    },
+    "cycles": 67
+  },
+  {
+    "design": "seq_matmul",
+    "N": 8,
+    "xc7": {
+      "LUT": 62,
+      "FF": 41,
+      "DSP48E1": 1,
+      "CARRY4": 8,
+      "LUTRAM_cells": 26
+    },
+    "ice40": null,
+    "cycles": 515
+  }
+]
