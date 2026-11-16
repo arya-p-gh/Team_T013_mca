@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.DS_Store
+sim/build/
+synth/build/
+synth/vivado_*/
+*.jou
+*.log.bak
+.Xil/
