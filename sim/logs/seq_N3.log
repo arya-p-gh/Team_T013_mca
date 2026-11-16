@@ -1,0 +1,22 @@
+VCD info: dumpfile sim/waves/tb_seq_N3.vcd opened for output.
+=== Sequential baseline (1 MAC), N=3, 14 tests ===
+  test  0 : start->done =  30 cycles | load 18 | read 9 | PASS
+  test  1 : start->done =  30 cycles | load 18 | read 9 | PASS
+  test  2 : start->done =  30 cycles | load 18 | read 9 | PASS
+  test  3 : start->done =  30 cycles | load 18 | read 9 | PASS
+  test  4 : start->done =  30 cycles | load 18 | read 9 | PASS
+  test  5 : start->done =  30 cycles | load 18 | read 9 | PASS
+  test  6 : start->done =  30 cycles | load 18 | read 9 | PASS
+  test  7 : start->done =  30 cycles | load 18 | read 9 | PASS
+  -- result matrix of test 7 (Q4.4 x Q4.4 -> Q12.8) --
+     -3.8750  -2.1875   5.6250
+     -3.4375  -1.7500   6.0625
+     -3.0000  -1.3125   6.5000
+  test  8 : start->done =  30 cycles | load 18 | read 9 | PASS
+  test  9 : start->done =  30 cycles | load 18 | read 9 | PASS
+  test 10 : start->done =  30 cycles | load 18 | read 9 | PASS
+  test 11 : start->done =  30 cycles | load 18 | read 9 | PASS
+  test 12 : start->done =  30 cycles | load 18 | read 9 | PASS
+  test 13 : start->done =  30 cycles | load 18 | read 9 | PASS
+SUMMARY N=3 tests=14 errors=0 compute_cycles_per_matmul=30 -> ALL PASSED
+tb/tb_matmul.v:124: $finish called at 8006000 (1ps)

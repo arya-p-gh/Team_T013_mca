@@ -1,0 +1,27 @@
+VCD info: dumpfile sim/waves/tb_seq_N8.vcd opened for output.
+=== Sequential baseline (1 MAC), N=8, 14 tests ===
+  test  0 : start->done = 515 cycles | load 128 | read 64 | PASS
+  test  1 : start->done = 515 cycles | load 128 | read 64 | PASS
+  test  2 : start->done = 515 cycles | load 128 | read 64 | PASS
+  test  3 : start->done = 515 cycles | load 128 | read 64 | PASS
+  test  4 : start->done = 515 cycles | load 128 | read 64 | PASS
+  test  5 : start->done = 515 cycles | load 128 | read 64 | PASS
+  test  6 : start->done = 515 cycles | load 128 | read 64 | PASS
+  test  7 : start->done = 515 cycles | load 128 | read 64 | PASS
+  -- result matrix of test 7 (Q4.4 x Q4.4 -> Q12.8) --
+      0.5000   5.1250   8.2500  -7.0000   0.5000   5.1250   8.2500  -7.0000
+      1.1250   5.7500   8.8750  -6.3750   1.1250   5.7500   8.8750  -6.3750
+      1.7500   6.3750   9.5000  -5.7500   1.7500   6.3750   9.5000  -5.7500
+      2.3750   7.0000  10.1250  -5.1250   2.3750   7.0000  10.1250  -5.1250
+      3.0000   7.6250  10.7500  -4.5000   3.0000   7.6250  10.7500  -4.5000
+      3.6250   8.2500  11.3750  -3.8750   3.6250   8.2500  11.3750  -3.8750
+      4.2500   8.8750  12.0000  -3.2500   4.2500   8.8750  12.0000  -3.2500
+      4.8750   9.5000  12.6250  -2.6250   4.8750   9.5000  12.6250  -2.6250
+  test  8 : start->done = 515 cycles | load 128 | read 64 | PASS
+  test  9 : start->done = 515 cycles | load 128 | read 64 | PASS
+  test 10 : start->done = 515 cycles | load 128 | read 64 | PASS
+  test 11 : start->done = 515 cycles | load 128 | read 64 | PASS
+  test 12 : start->done = 515 cycles | load 128 | read 64 | PASS
+  test 13 : start->done = 515 cycles | load 128 | read 64 | PASS
+SUMMARY N=8 tests=14 errors=0 compute_cycles_per_matmul=515 -> ALL PASSED
+tb/tb_matmul.v:124: $finish called at 99056000 (1ps)

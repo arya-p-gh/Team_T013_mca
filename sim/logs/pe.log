@@ -1,0 +1,11 @@
+VCD info: dumpfile sim/waves/tb_pe.vcd opened for output.
+=== Processing Element directed tests ===
+  PASS after reset                          a_out=0 b_out=0 acc=0
+  PASS forward + MAC (2*3)                  a_out=2 b_out=3 acc=6
+  PASS forward + MAC (-4*5)                 a_out=-4 b_out=5 acc=-14
+  PASS stall (en=0)                         a_out=-4 b_out=5 acc=-14
+  PASS clear                                a_out=0 b_out=0 acc=0
+  PASS 4-term dot product = 70              a_out=4 b_out=8 acc=70
+  PASS zero bubbles keep acc                a_out=0 b_out=0 acc=70
+PE: 7 checks, 0 errors -> ALL PASSED
+tb/tb_pe.v:70: $finish called at 116000 (1ps)

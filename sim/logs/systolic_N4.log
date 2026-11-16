@@ -1,0 +1,23 @@
+VCD info: dumpfile sim/waves/tb_systolic_N4.vcd opened for output.
+=== Systolic array 4x4, 14 tests ===
+  test  0 : start->done =  14 cycles | load 32 | read 16 | PASS
+  test  1 : start->done =  14 cycles | load 32 | read 16 | PASS
+  test  2 : start->done =  14 cycles | load 32 | read 16 | PASS
+  test  3 : start->done =  14 cycles | load 32 | read 16 | PASS
+  test  4 : start->done =  14 cycles | load 32 | read 16 | PASS
+  test  5 : start->done =  14 cycles | load 32 | read 16 | PASS
+  test  6 : start->done =  14 cycles | load 32 | read 16 | PASS
+  test  7 : start->done =  14 cycles | load 32 | read 16 | PASS
+  -- result matrix of test 7 (Q4.4 x Q4.4 -> Q12.8) --
+      0.2500   2.5625   4.1250  -3.5000
+      0.5625   2.8750   4.4375  -3.1875
+      0.8750   3.1875   4.7500  -2.8750
+      1.1875   3.5000   5.0625  -2.5625
+  test  8 : start->done =  14 cycles | load 32 | read 16 | PASS
+  test  9 : start->done =  14 cycles | load 32 | read 16 | PASS
+  test 10 : start->done =  14 cycles | load 32 | read 16 | PASS
+  test 11 : start->done =  14 cycles | load 32 | read 16 | PASS
+  test 12 : start->done =  14 cycles | load 32 | read 16 | PASS
+  test 13 : start->done =  14 cycles | load 32 | read 16 | PASS
+SUMMARY N=4 tests=14 errors=0 compute_cycles_per_matmul=14 -> ALL PASSED
+tb/tb_matmul.v:124: $finish called at 8706000 (1ps)

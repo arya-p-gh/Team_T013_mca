@@ -1,0 +1,17 @@
+VCD info: dumpfile sim/waves/tb_mac_unit.vcd opened for output.
+=== MAC unit directed tests ===
+  PASS reset value                              acc=0
+  PASS 3*4 accumulate from 0                    acc=12
+  PASS +5*-2  -> 12-10                          acc=2
+  PASS -7*-7  -> 2+49                           acc=51
+  PASS en=0 holds value                         acc=51
+  PASS load=1 restarts with 6*7                 acc=42
+  PASS clr has priority                         acc=0
+  PASS 127*127                                  acc=16129
+  PASS +(-128*-128)                             acc=32513
+  PASS +(127*-128)                              acc=16257
+  PASS load most negative product               acc=-16256
+  PASS 16 x (-128*-128) no overflow             acc=262144
+  PASS Q4.4: 1.5 * -2.25 = -3.375               acc=-864
+MAC unit: 13 checks, 0 errors -> ALL PASSED
+tb/tb_mac_unit.v:66: $finish called at 286000 (1ps)
