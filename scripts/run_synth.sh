@@ -29,4 +29,3 @@ for TOP in systolic_top seq_matmul; do
     fi
   done
 done
-.venv/bin/python scripts/summarize_synth.py

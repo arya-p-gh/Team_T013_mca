@@ -7,3 +7,8 @@ synth/vivado_*/
 *.jou
 *.log.bak
 .Xil/
+# big / regenerated files we don't keep in the repo
+sim/waves/*_N8.vcd
+synth/reports/*_xc7.log
+synth/reports/*_ice40.log
+synth/reports/*.json
