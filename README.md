@@ -5,7 +5,7 @@ B.Tech Project 12 (Phase I), Team T013
 We built a small systolic-array accelerator in Verilog that multiplies two N×N matrices (we mainly used 4×4). The inputs are 8-bit signed fixed point (Q4.4). We compared it against a simple design that uses one MAC unit and does the multiply sequentially.
 
 - **Report:** [report/report.pdf](report/report.pdf)
-- **Demo video:** _link to be added_
+- **Demo video:** https://drive.google.com/file/d/10t8ryxw02DLN9Svh9yfG19ND-GOrFu4N/view?usp=sharing
 
 ## Team
 
