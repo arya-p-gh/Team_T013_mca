@@ -1,0 +1,19 @@
+VCD info: dumpfile sim/waves/tb_uart.vcd opened for output.
+=== UART bridge end-to-end test (14 tests) ===
+  ping -> got 0x4b (   ok)
+  test  0 sent and received over UART
+  test  1 sent and received over UART
+  test  2 sent and received over UART
+  test  3 sent and received over UART
+  test  4 sent and received over UART
+  test  5 sent and received over UART
+  test  6 sent and received over UART
+  test  7 sent and received over UART
+  test  8 sent and received over UART
+  test  9 sent and received over UART
+  test 10 sent and received over UART
+  test 11 sent and received over UART
+  test 12 sent and received over UART
+  test 13 sent and received over UART
+UART: 224 results checked, 0 errors -> ALL PASSED
+tb/tb_uart.v:104: $finish called at 1882965000 (1ps)
