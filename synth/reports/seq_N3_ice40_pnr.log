@@ -19,7 +19,7 @@ Info: Promoting globals..
 Info: promoting clk$SB_IO_IN (fanout 360)
 Info: Constraining chains...
 Info:        2 LCs used to legalise carry chains.
-Info: Checksum: 0x2c18d97c
+Info: Checksum: 0x0b509790
 
 Info: Device utilisation:
 Info: 	         ICESTORM_LC:     893/   7680    11%
@@ -48,13 +48,13 @@ Info:     at iteration #9, type ALL: wirelen solved = 1813, spread = 3303, legal
 Info:     at iteration #10, type ALL: wirelen solved = 1871, spread = 3173, legal = 4037; time = 0.02s
 Info:     at iteration #11, type ALL: wirelen solved = 1937, spread = 3265, legal = 3959; time = 0.02s
 Info:     at iteration #12, type ALL: wirelen solved = 2060, spread = 3203, legal = 3884; time = 0.01s
-Info:     at iteration #13, type ALL: wirelen solved = 2113, spread = 3211, legal = 3936; time = 0.02s
+Info:     at iteration #13, type ALL: wirelen solved = 2113, spread = 3211, legal = 3936; time = 0.01s
 Info:     at iteration #14, type ALL: wirelen solved = 2163, spread = 3072, legal = 3939; time = 0.02s
 Info:     at iteration #15, type ALL: wirelen solved = 2142, spread = 3221, legal = 4027; time = 0.02s
-Info:     at iteration #16, type ALL: wirelen solved = 2227, spread = 3126, legal = 3980; time = 0.02s
+Info:     at iteration #16, type ALL: wirelen solved = 2227, spread = 3126, legal = 3980; time = 0.01s
 Info:     at iteration #17, type ALL: wirelen solved = 2283, spread = 3524, legal = 4083; time = 0.01s
 Info: HeAP Placer Time: 0.34s
-Info:   of which solving equations: 0.18s
+Info:   of which solving equations: 0.17s
 Info:   of which spreading cells: 0.03s
 Info:   of which strict legalisation: 0.10s
 
@@ -65,7 +65,7 @@ Info:   at iteration #10: temp = 0.000000, timing cost = 381, wirelen = 2927
 Info:   at iteration #15: temp = 0.000000, timing cost = 359, wirelen = 2820
 Info:   at iteration #20: temp = 0.000000, timing cost = 357, wirelen = 2742
 Info:   at iteration #23: temp = 0.000000, timing cost = 353, wirelen = 2712 
-Info: SA placement time 0.39s
+Info: SA placement time 0.38s
 
 Info: Max frequency for clock 'clk$SB_IO_IN_$glb_clk': 55.87 MHz (PASS at 50.00 MHz)
 
@@ -96,20 +96,20 @@ Info: [ 15252,  16074) |*****************************************+
 Info: [ 16074,  16896) |************************************************************ 
 Info: [ 16896,  17718) |**********************************+
 Info: [ 17718,  18540) |************+
-Info: Checksum: 0x533c42fc
+Info: Checksum: 0x2ca8ab16
 
 Info: Routing..
 Info: Setting up routing queue.
 Info: Routing 2509 arcs.
 Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
 Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
-Info:       1000 |      106        869 |  106   869 |      1662|       0.13       0.13|
-Info:       2000 |      382       1588 |  276   719 |       987|       0.14       0.27|
-Info:       3000 |      548       2420 |  166   832 |       212|       0.26       0.53|
-Info:       3284 |      604       2648 |   56   228 |         0|       0.09       0.62|
+Info:       1000 |      106        869 |  106   869 |      1662|       0.12       0.12|
+Info:       2000 |      382       1588 |  276   719 |       987|       0.13       0.26|
+Info:       3000 |      548       2420 |  166   832 |       212|       0.25       0.51|
+Info:       3284 |      604       2648 |   56   228 |         0|       0.09       0.60|
 Info: Routing complete.
-Info: Router1 time 0.62s
-Info: Checksum: 0x09fb6113
+Info: Router1 time 0.60s
+Info: Checksum: 0xf3fd8712
 
 Info: Critical path report for clock 'clk$SB_IO_IN_$glb_clk' (posedge -> posedge):
 Info:       type curr  total name
@@ -233,28 +233,28 @@ Info:      logic  0.26  15.41 Source acc_SB_DFFESR_Q_4_D_SB_LUT4_O_I3_SB_LUT4_O_
 Info:    routing  0.20  15.60 Net acc_SB_DFFESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_I3 (7,8) -> (7,9)
 Info:                          Sink acc_SB_DFFESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_LC.CIN
 Info:                          Defined in:
-Info:                               rtl/mac_unit.v:35.38-35.52
+Info:                               rtl/mac_unit.v:81.40-81.54
 Info:                               /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                               /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/abc9_model.v:4.9-4.11
 Info:      logic  0.13  15.73 Source acc_SB_DFFESR_Q_3_D_SB_LUT4_O_I3_SB_LUT4_O_LC.COUT
 Info:    routing  0.00  15.73 Net acc_SB_DFFESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_I3 (7,9) -> (7,9)
 Info:                          Sink acc_SB_DFFESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_LC.CIN
 Info:                          Defined in:
-Info:                               rtl/mac_unit.v:35.38-35.52
+Info:                               rtl/mac_unit.v:81.40-81.54
 Info:                               /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                               /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/abc9_model.v:4.9-4.11
 Info:      logic  0.13  15.86 Source acc_SB_DFFESR_Q_2_D_SB_LUT4_O_I3_SB_LUT4_O_LC.COUT
 Info:    routing  0.00  15.86 Net acc_SB_DFFESR_Q_1_D_SB_LUT4_O_I3_SB_LUT4_O_I3 (7,9) -> (7,9)
 Info:                          Sink acc_SB_DFFESR_Q_1_D_SB_LUT4_O_I3_SB_LUT4_O_LC.CIN
 Info:                          Defined in:
-Info:                               rtl/mac_unit.v:35.38-35.52
+Info:                               rtl/mac_unit.v:81.40-81.54
 Info:                               /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                               /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/abc9_model.v:4.9-4.11
 Info:      logic  0.13  15.98 Source acc_SB_DFFESR_Q_1_D_SB_LUT4_O_I3_SB_LUT4_O_LC.COUT
 Info:    routing  0.26  16.24 Net acc_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3 (7,9) -> (7,9)
 Info:                          Sink acc_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_LC.I3
 Info:                          Defined in:
-Info:                               rtl/mac_unit.v:35.38-35.52
+Info:                               rtl/mac_unit.v:81.40-81.54
 Info:                               /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/arith_map.v:62.5-70.4
 Info:                               /opt/homebrew/Cellar/yosys/0.71/bin/../share/yosys/ice40/abc9_model.v:4.9-4.11
 Info:      logic  0.31  16.56 Source acc_SB_DFFESR_Q_D_SB_LUT4_O_I3_SB_LUT4_O_LC.O
@@ -291,7 +291,7 @@ Info:      logic  0.31  6.27 Source rd_data_SB_LUT4_O_18_LC.O
 Info:    routing  2.79  9.06 Net rd_data[1]$SB_IO_OUT (7,16) -> (33,16)
 Info:                          Sink rd_data[1]$sb_io.D_OUT_0
 Info:                          Defined in:
-Info:                               rtl/seq_matmul.v:29.37-29.44
+Info:                               rtl/seq_matmul.v:35.37-35.44
 Info: 1.32 ns logic, 7.74 ns routing
 
 Info: Critical path report for cross-domain path '<async>' -> 'posedge clk$SB_IO_IN_$glb_clk':
@@ -300,7 +300,7 @@ Info:     source  0.00  0.00 Source rst$sb_io.D_IN_0
 Info:    routing  1.28  1.28 Net rst$SB_IO_IN (0,10) -> (3,8)
 Info:                          Sink start_SB_LUT4_I2_O_SB_LUT4_O_LC.I3
 Info:                          Defined in:
-Info:                               rtl/mac_unit.v:20.37-20.40
+Info:                               rtl/mac_unit.v:31.37-31.40
 Info:      logic  0.31  1.60 Source start_SB_LUT4_I2_O_SB_LUT4_O_LC.O
 Info:    routing  0.59  2.18 Net have_prev_SB_LUT4_I3_O[0] (3,8) -> (2,9)
 Info:                          Sink have_prev_SB_LUT4_I3_O_SB_LUT4_I3_LC.I1
@@ -346,7 +346,7 @@ Info:      logic  0.31  6.58 Source rd_data_SB_LUT4_O_8_LC.O
 Info:    routing  2.21  8.79 Net rd_data[11]$SB_IO_OUT (9,9) -> (33,9)
 Info:                          Sink rd_data[11]$sb_io.D_OUT_0
 Info:                          Defined in:
-Info:                               rtl/seq_matmul.v:29.37-29.44
+Info:                               rtl/seq_matmul.v:35.37-35.44
 Info: 1.95 ns logic, 6.84 ns routing
 
 Info: Max frequency for clock 'clk$SB_IO_IN_$glb_clk': 57.21 MHz (PASS at 50.00 MHz)

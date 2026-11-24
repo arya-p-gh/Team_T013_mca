@@ -1,0 +1,30 @@
+
+20. Printing statistics.
+
+=== tiled_matmul ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     1042 wires
+     5186 wire bits
+      107 public wires
+     2445 public wire bits
+       11 ports
+       47 port bits
+     2841 cells
+       38   $scopeinfo
+        1   BUFG
+       19   CARRY4
+       16   DSP48E1
+     1795   FDRE
+       25   IBUF
+       10   INV
+       50   LUT2
+       52   LUT3
+       93   LUT4
+      291   LUT5
+      373   LUT6
+       22   OBUF
+       32   RAM32M
+       24   RAM64M
+

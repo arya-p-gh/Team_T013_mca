@@ -1,5 +1,5 @@
 
-11. Printing statistics.
+20. Printing statistics.
 
 === $paramod\seq_matmul\N=s32'00000000000000000000000000001000 ===
 

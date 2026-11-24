@@ -1,0 +1,30 @@
+
+19. Printing statistics.
+
+=== basys3_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      583 wires
+     2645 wire bits
+       52 public wires
+     1168 public wire bits
+        5 ports
+       20 port bits
+     1007 cells
+       41   $scopeinfo
+        1   BUFG
+       20   CARRY4
+       16   DSP48E1
+      559   FDRE
+        1   FDSE
+        3   IBUF
+       16   INV
+       48   LUT2
+       19   LUT3
+       63   LUT4
+      125   LUT5
+       62   LUT6
+       17   OBUF
+       16   RAM32M
+

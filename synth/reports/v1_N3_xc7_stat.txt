@@ -1,12 +1,12 @@
 
-11. Printing statistics.
+20. Printing statistics.
 
 === systolic_top ===
 
         +----------Local Count, excluding submodules.
         | 
-      242 wires
-     1043 wire bits
+      241 wires
+     1040 wire bits
        25 public wires
       480 public wire bits
        11 ports

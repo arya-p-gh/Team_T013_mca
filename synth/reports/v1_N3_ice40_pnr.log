@@ -23,7 +23,7 @@ Info: promoting t_SB_DFFESR_Q_D_SB_LUT4_O_I0_SB_LUT4_I2_O [cen] (fanout 276)
 Info: promoting state_SB_DFFESR_Q_D_SB_LUT4_I3_O [cen] (fanout 180)
 Info: Constraining chains...
 Info:       10 LCs used to legalise carry chains.
-Info: Checksum: 0x1400759a
+Info: Checksum: 0xdb230a7b
 
 Info: Device utilisation:
 Info: 	         ICESTORM_LC:    3051/   7680    39%
@@ -59,10 +59,10 @@ Info:     at iteration #16, type ALL: wirelen solved = 6081, spread = 10424, leg
 Info:     at iteration #17, type ALL: wirelen solved = 6307, spread = 10635, legal = 11521; time = 0.07s
 Info:     at iteration #18, type ALL: wirelen solved = 6360, spread = 10903, legal = 11604; time = 0.04s
 Info:     at iteration #19, type ALL: wirelen solved = 6498, spread = 10586, legal = 11283; time = 0.04s
-Info: HeAP Placer Time: 1.23s
-Info:   of which solving equations: 0.78s
-Info:   of which spreading cells: 0.13s
-Info:   of which strict legalisation: 0.16s
+Info: HeAP Placer Time: 1.21s
+Info:   of which solving equations: 0.77s
+Info:   of which spreading cells: 0.12s
+Info:   of which strict legalisation: 0.15s
 
 Info: Running simulated annealing placer for refinement.
 Info:   at iteration #1: temp = 0.000000, timing cost = 951, wirelen = 10929
@@ -71,7 +71,7 @@ Info:   at iteration #10: temp = 0.000000, timing cost = 692, wirelen = 9021
 Info:   at iteration #15: temp = 0.000000, timing cost = 943, wirelen = 8771
 Info:   at iteration #20: temp = 0.000000, timing cost = 922, wirelen = 8502
 Info:   at iteration #24: temp = 0.000000, timing cost = 887, wirelen = 8437 
-Info: SA placement time 1.84s
+Info: SA placement time 1.72s
 
 Info: Max frequency for clock 'clk$SB_IO_IN_$glb_clk': 78.72 MHz (PASS at 50.00 MHz)
 
@@ -102,29 +102,29 @@ Info: [ 16337,  16902) |******************+
 Info: [ 16902,  17467) |**************************************+
 Info: [ 17467,  18032) |******************************+
 Info: [ 18032,  18597) |*********************+
-Info: Checksum: 0x8b1e29f4
+Info: Checksum: 0x5de22605
 
 Info: Routing..
 Info: Setting up routing queue.
 Info: Routing 9948 arcs.
 Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
 Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
-Info:       1000 |       30        969 |   30   969 |      9003|       0.36       0.36|
-Info:       2000 |      117       1882 |   87   913 |      8135|       0.16       0.52|
-Info:       3000 |      213       2779 |   96   897 |      7278|       0.18       0.70|
-Info:       4000 |      328       3586 |  115   807 |      6425|       0.06       0.76|
-Info:       5000 |      440       4445 |  112   859 |      5570|       0.05       0.81|
-Info:       6000 |      631       5241 |  191   796 |      4804|       0.05       0.86|
-Info:       7000 |      901       5967 |  270   726 |      4163|       0.07       0.93|
-Info:       8000 |     1101       6767 |  200   800 |      3437|       0.06       0.98|
-Info:       9000 |     1364       7503 |  263   736 |      2797|       0.07       1.05|
-Info:      10000 |     1609       8258 |  245   755 |      2133|       0.08       1.13|
-Info:      11000 |     1838       9015 |  229   757 |      1447|       0.12       1.25|
-Info:      12000 |     2002       9844 |  164   829 |       685|       0.22       1.47|
-Info:      12842 |     2116      10572 |  114   728 |         0|       0.24       1.71|
+Info:       1000 |       30        969 |   30   969 |      9003|       0.33       0.33|
+Info:       2000 |      117       1882 |   87   913 |      8135|       0.14       0.47|
+Info:       3000 |      213       2779 |   96   897 |      7278|       0.17       0.64|
+Info:       4000 |      328       3586 |  115   807 |      6425|       0.06       0.70|
+Info:       5000 |      440       4445 |  112   859 |      5570|       0.05       0.75|
+Info:       6000 |      631       5241 |  191   796 |      4804|       0.06       0.81|
+Info:       7000 |      901       5967 |  270   726 |      4163|       0.07       0.87|
+Info:       8000 |     1101       6767 |  200   800 |      3437|       0.05       0.93|
+Info:       9000 |     1364       7503 |  263   736 |      2797|       0.06       0.99|
+Info:      10000 |     1609       8258 |  245   755 |      2133|       0.08       1.07|
+Info:      11000 |     1838       9015 |  229   757 |      1447|       0.12       1.19|
+Info:      12000 |     2002       9844 |  164   829 |       685|       0.21       1.41|
+Info:      12842 |     2116      10572 |  114   728 |         0|       0.26       1.67|
 Info: Routing complete.
-Info: Router1 time 1.71s
-Info: Checksum: 0xf1904eae
+Info: Router1 time 1.67s
+Info: Checksum: 0x63b23d56
 
 Info: Critical path report for clock 'clk$SB_IO_IN_$glb_clk' (posedge -> posedge):
 Info:       type curr  total name
@@ -132,7 +132,7 @@ Info:   clk-to-q  0.54  0.54 Source b_top_SB_DFFSR_Q_21_D_SB_LUT4_O_LC.O
 Info:    routing  1.27  1.81 Net b_top[18] (5,18) -> (9,17)
 Info:                          Sink c_flat_SB_DFFESR_Q_58_D_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_O_1_I2_SB_LUT4_I3_1_O_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_I3_SB_LUT4_I0_O_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_O_1_LC.I3
 Info:                          Defined in:
-Info:                               rtl/systolic_array.v:31.31-31.34
+Info:                               rtl/systolic_array.v:36.31-36.34
 Info:      logic  0.31  2.13 Source c_flat_SB_DFFESR_Q_58_D_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_O_1_I2_SB_LUT4_I3_1_O_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_I3_SB_LUT4_I0_O_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_O_1_LC.O
 Info:    routing  0.59  2.72 Net c_flat_SB_DFFESR_Q_58_D_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_O_1_I2_SB_LUT4_I3_1_O_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_I3_SB_LUT4_I0_O_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_1_I3[0] (9,17) -> (10,16)
 Info:                          Sink c_flat_SB_DFFESR_Q_58_D_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_I3_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_O_1_I2_SB_LUT4_I3_1_O_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_I3_SB_LUT4_I0_O_SB_LUT4_O_I3_SB_LUT4_I3_I0_SB_LUT4_O_LC.I3
@@ -238,7 +238,7 @@ Info:     source  0.00  0.00 Source rd_addr[0]$sb_io.D_IN_0
 Info:    routing  3.11  3.11 Net rd_addr[0]$SB_IO_IN (16,33) -> (3,14)
 Info:                          Sink rd_data_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_2_I3_SB_LUT4_O_LC.I3
 Info:                          Defined in:
-Info:                               rtl/output_buffer.v:18.37-18.44
+Info:                               rtl/output_buffer.v:17.37-17.44
 Info:      logic  0.31  3.43 Source rd_data_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_2_I3_SB_LUT4_O_LC.O
 Info:    routing  1.53  4.96 Net rd_data_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_2_I3[1] (3,14) -> (11,14)
 Info:                          Sink rd_data_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_2_LC.I2
@@ -258,7 +258,7 @@ Info:      logic  0.31  8.83 Source rd_data_SB_LUT4_O_LC.O
 Info:    routing  1.85  10.68 Net rd_data[19]$SB_IO_OUT (19,19) -> (33,19)
 Info:                          Sink rd_data[19]$sb_io.D_OUT_0
 Info:                          Defined in:
-Info:                               rtl/systolic_top.v:42.37-42.44
+Info:                               rtl/systolic_top.v:40.37-40.44
 Info: 1.32 ns logic, 9.35 ns routing
 
 Info: Critical path report for cross-domain path '<async>' -> 'posedge clk$SB_IO_IN_$glb_clk':
@@ -267,7 +267,7 @@ Info:     source  0.00  0.00 Source wr_addr[2]$sb_io.D_IN_0
 Info:    routing  3.40  3.40 Net wr_addr[2]$SB_IO_IN (33,10) -> (1,16)
 Info:                          Sink u_buf_a.mem[7]_SB_DFFE_Q_E_SB_LUT4_O_I2_SB_LUT4_O_LC.I3
 Info:                          Defined in:
-Info:                               rtl/systolic_top.v:34.37-34.44
+Info:                               rtl/systolic_top.v:32.37-32.44
 Info:      logic  0.31  3.71 Source u_buf_a.mem[7]_SB_DFFE_Q_E_SB_LUT4_O_I2_SB_LUT4_O_LC.O
 Info:    routing  2.07  5.78 Net u_buf_a.mem[7]_SB_DFFE_Q_E_SB_LUT4_O_I2[0] (1,16) -> (2,4)
 Info:                          Sink u_buf_a.mem[4]_SB_DFFE_Q_E_SB_LUT4_O_LC.I1
@@ -285,7 +285,7 @@ Info:   clk-to-q  0.54  0.54 Source u_obuf.c_reg_SB_DFFESR_Q_140_DFFLC.O
 Info:    routing  1.13  1.67 Net u_obuf.c_reg[39] (3,23) -> (3,14)
 Info:                          Sink rd_data_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_2_I3_SB_LUT4_O_LC.I2
 Info:                          Defined in:
-Info:                               rtl/output_buffer.v:21.25-21.30
+Info:                               rtl/output_buffer.v:20.25-20.30
 Info:      logic  0.38  2.05 Source rd_data_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_2_I3_SB_LUT4_O_LC.O
 Info:    routing  1.53  3.58 Net rd_data_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_2_I3[1] (3,14) -> (11,14)
 Info:                          Sink rd_data_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_2_LC.I2
@@ -305,7 +305,7 @@ Info:      logic  0.31  7.45 Source rd_data_SB_LUT4_O_LC.O
 Info:    routing  1.85  9.30 Net rd_data[19]$SB_IO_OUT (19,19) -> (33,19)
 Info:                          Sink rd_data[19]$sb_io.D_OUT_0
 Info:                          Defined in:
-Info:                               rtl/systolic_top.v:42.37-42.44
+Info:                               rtl/systolic_top.v:40.37-40.44
 Info: 1.93 ns logic, 7.37 ns routing
 
 Info: Max frequency for clock 'clk$SB_IO_IN_$glb_clk': 82.77 MHz (PASS at 50.00 MHz)
