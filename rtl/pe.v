@@ -18,10 +18,14 @@
 //
 // The result never moves while it's being built, it just sits in acc. That's
 // why this style is called "output stationary".
+//
+// Phase II: PIPE is passed straight down to the MAC. The a/b forwarding still
+// takes exactly 1 cycle either way, only acc finishes 1 cycle later.
 `timescale 1ns/1ps
 module pe #(
     parameter DATA_W = 8,
-    parameter ACC_W  = 20
+    parameter ACC_W  = 20,
+    parameter PIPE   = 0
 )(
     input  wire                     clk,
     input  wire                     rst,
@@ -46,7 +50,7 @@ module pe #(
 
     // the actual math. load is tied to 0 because a PE always accumulates;
     // we use clr before each new job to start from zero instead
-    mac_unit #(.DATA_W(DATA_W), .ACC_W(ACC_W)) u_mac (
+    mac_unit #(.DATA_W(DATA_W), .ACC_W(ACC_W), .PIPE(PIPE)) u_mac (
         .clk (clk),
         .rst (rst),
         .en  (en),

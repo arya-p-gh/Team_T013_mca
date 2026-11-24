@@ -15,7 +15,8 @@
 module systolic_array #(
     parameter N      = 4,
     parameter DATA_W = 8,
-    parameter ACC_W  = 20
+    parameter ACC_W  = 20,
+    parameter PIPE   = 0     // 1 = pipelined MACs inside every PE (Phase II)
 )(
     input  wire                    clk,
     input  wire                    rst,
@@ -49,7 +50,7 @@ module systolic_array #(
         // drives the link after it, which chains them all together
         for (i = 0; i < N; i = i + 1) begin : g_row
             for (j = 0; j < N; j = j + 1) begin : g_col
-                pe #(.DATA_W(DATA_W), .ACC_W(ACC_W)) u_pe (
+                pe #(.DATA_W(DATA_W), .ACC_W(ACC_W), .PIPE(PIPE)) u_pe (
                     .clk  (clk),
                     .rst  (rst),
                     .en   (en),
