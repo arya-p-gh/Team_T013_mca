@@ -2,15 +2,20 @@
 // Tests the MAC unit on its own before we trust it inside the PEs.
 // Every step sets the inputs, waits one clock, then checks acc against the
 // value we worked out by hand. Any mismatch gets printed as FAIL.
+//
+// Phase II: run it with -P tb_mac_unit.PIPE=1 to test the pipelined MAC.
+// Same checks, same expected numbers. The only difference is that the step
+// task waits one extra clock (with en=0) so the delayed result can land.
 `timescale 1ns/1ps
 module tb_mac_unit;
+    parameter  PIPE = 0;
     localparam DATA_W = 8, ACC_W = 20;
     reg clk = 0, rst = 1, en = 0, clr = 0, load = 0;
     reg  signed [DATA_W-1:0] a = 0, b = 0;
     wire signed [ACC_W-1:0]  acc;
     integer errors = 0, checks = 0;
 
-    mac_unit #(.DATA_W(DATA_W), .ACC_W(ACC_W)) dut (
+    mac_unit #(.DATA_W(DATA_W), .ACC_W(ACC_W), .PIPE(PIPE)) dut (
         .clk(clk), .rst(rst), .en(en), .clr(clr), .load(load), .a(a), .b(b), .acc(acc));
 
     always #5 clk = ~clk;
@@ -32,13 +37,15 @@ module tb_mac_unit;
         begin
             en = e; clr = c; load = l; a = x; b = y;
             @(posedge clk); #1;
+            // pipelined MAC: give the product one more clock to reach acc
+            if (PIPE) begin en = 0; @(posedge clk); #1; end
         end
     endtask
 
     initial begin
-        $dumpfile("sim/waves/tb_mac_unit.vcd");
+        $dumpfile(PIPE ? "sim/waves/tb_mac_unit_pipe.vcd" : "sim/waves/tb_mac_unit.vcd");
         $dumpvars(0, tb_mac_unit);
-        $display("=== MAC unit directed tests ===");
+        $display("=== MAC unit directed tests (PIPE=%0d) ===", PIPE);
         @(posedge clk); #1 rst = 0;
         check(0, "reset value");
 
@@ -61,7 +68,7 @@ module tb_mac_unit;
         // 1.5 * -2.25 = -3.375, which is -864 in Q8.8 (-3.375 * 256)
         step(1,0,1, 8'sh18, 8'shDC); check(-864, "Q4.4: 1.5 * -2.25 = -3.375");
 
-        $display("MAC unit: %0d checks, %0d errors -> %s", checks, errors,
+        $display("MAC unit PIPE=%0d: %0d checks, %0d errors -> %s", PIPE, checks, errors,
                  errors ? "FAILED" : "ALL PASSED");
         $finish;
     end
