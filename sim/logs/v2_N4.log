@@ -1,0 +1,7 @@
+VCD info: dumpfile sim/waves/tb_matmul_v2_N4.vcd opened for output.
+=== systolic_top_v2 4x4, PIPE=1, 14 tests  ===
+  single: start->done latency = 15 cycles, load+run+read = 27 cycles per job
+  streaming: 14 jobs in 228 cycles = 16 cycles per job (steady state)
+  acc_mode: every test gave exactly 2 x C
+SUMMARY v2 N=4 PIPE=1 set= checked=672 errors=0 latency=15 e2e=27 stream=16 -> ALL PASSED
+tb/tb_matmul_v2.v:154: $finish called at 12036000 (1ps)

@@ -1,0 +1,7 @@
+VCD info: dumpfile sim/waves/tb_matmul_v2_N8_stress.vcd opened for output.
+=== systolic_top_v2 8x8, PIPE=1, 200 tests _stress ===
+  single: start->done latency = 27 cycles, load+run+read = 51 cycles per job
+  streaming: 200 jobs in 5608 cycles = 28 cycles per job (steady state)
+  acc_mode: every test gave exactly 2 x C
+SUMMARY v2 N=8 PIPE=1 set=_stress checked=38400 errors=0 latency=27 e2e=51 stream=28 -> ALL PASSED
+tb/tb_matmul_v2.v:154: $finish called at 314256000 (1ps)
