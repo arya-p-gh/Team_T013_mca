@@ -1,0 +1,7 @@
+VCD info: dumpfile sim/waves/tb_input_buffer_v2.vcd opened for output.
+=== input_buffer_v2 tests ===
+  bank 0 skew pattern checked
+  bank 1 skew pattern checked
+  bank 0 fed while bank 1 was being written
+input_buffer_v2: 264 checks, 0 errors -> ALL PASSED
+tb/tb_input_buffer_v2.v:93: $finish called at 416000 (1ps)
