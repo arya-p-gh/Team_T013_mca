@@ -1,0 +1,18 @@
+VCD info: dumpfile sim/waves/tb_tiled_M8.vcd opened for output.
+=== tiled_matmul: 8x8 matrices on a 4x4 array (2 tiles per side) ===
+  test  0 : start->done =  158 cycles | PASS
+  test  1 : start->done =  158 cycles | PASS
+  test  2 : start->done =  158 cycles | PASS
+  test  3 : start->done =  158 cycles | PASS
+  test  4 : start->done =  158 cycles | PASS
+  test  5 : start->done =  158 cycles | PASS
+  test  6 : start->done =  158 cycles | PASS
+  test  7 : start->done =  158 cycles | PASS
+  test  8 : start->done =  158 cycles | PASS
+  test  9 : start->done =  158 cycles | PASS
+  test 10 : start->done =  158 cycles | PASS
+  test 11 : start->done =  158 cycles | PASS
+  test 12 : start->done =  158 cycles | PASS
+  test 13 : start->done =  158 cycles | PASS
+SUMMARY tiled M=8 N=4 tests=14 checked=896 errors=0 cycles=158 -> ALL PASSED
+tb/tb_tiled.v:73: $finish called at 40900000 (1ps)
