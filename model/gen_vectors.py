@@ -19,6 +19,13 @@ Files it writes for each N (into sim/vectors/):
   N{N}_tests.txt  - the same tests printed nicely, handy for the report/demo
 
 Run it like:  python3 model/gen_vectors.py 3 4 8   (defaults to 3 and 4)
+
+Phase II additions:
+  - sizes like 12 work too (used by the tiled 12x12 test)
+  - --stress K  also writes N{N}_stress_ab.hex / N{N}_stress_c.hex with K extra
+    random tests (different seed), for the long regression run. Random tests
+    catch the weird corner cases our hand-picked ones might miss.
+    e.g.  python3 model/gen_vectors.py 4 --stress 200
 """
 import os
 import sys
@@ -71,19 +78,38 @@ def build_tests(n, seed=2026):
     for r in range(6):
         t.append(("random #%d" % (r + 1), rng.integers(lo, hi + 1, (n, n)),
                   rng.integers(lo, hi + 1, (n, n))))
-    return [(name, a.astype(int), b.astype(int), matmul_ref(a, b)) for name, a, b in t]
+    # wrap every input into the signed 8-bit range. For N <= 8 nothing changes,
+    # but for bigger N (like 12) patterns such as 1..N^2 would go past 127,
+    # and the hardware can only hold -128..127
+    def fit(m):
+        return ((np.asarray(m).astype(int) + 128) % 256) - 128
+    return [(name, fit(a), fit(b), matmul_ref(fit(a), fit(b))) for name, a, b in t]
 
 
-def write(n):
+def stress_tests(n, count, seed=777):
+    """count purely random tests, from a different seed than build_tests"""
+    rng = np.random.default_rng(seed + n)
+    lo, hi = -(1 << (DATA_W - 1)), (1 << (DATA_W - 1)) - 1
+    out = []
+    for r in range(count):
+        a = rng.integers(lo, hi + 1, (n, n))
+        b = rng.integers(lo, hi + 1, (n, n))
+        out.append(("stress #%d" % (r + 1), a, b, matmul_ref(a, b)))
+    return out
+
+
+def write(n, tests=None, tag=""):
     os.makedirs(OUT, exist_ok=True)
-    tests = build_tests(n)
-    with open(os.path.join(OUT, "N%d_ab.hex" % n), "w") as fab, \
-         open(os.path.join(OUT, "N%d_c.hex" % n), "w") as fc, \
-         open(os.path.join(OUT, "N%d_tests.txt" % n), "w") as ft:
+    if tests is None:
+        tests = build_tests(n)
+    with open(os.path.join(OUT, "N%d%s_ab.hex" % (n, tag)), "w") as fab, \
+         open(os.path.join(OUT, "N%d%s_c.hex" % (n, tag)), "w") as fc, \
+         open(os.path.join(OUT, "N%d%s_tests.txt" % (n, tag)), "w") as ft:
         for k, (name, a, b, c) in enumerate(tests):
             # make sure the answer fits in the 20-bit accumulator, otherwise
             # the test itself would be broken
             assert c.max() < (1 << (ACC_W - 1)) and c.min() >= -(1 << (ACC_W - 1))
+            assert a.min() >= -128 and a.max() <= 127 and b.min() >= -128 and b.max() <= 127
             for v in a.flatten():
                 fab.write(tohex(v, DATA_W) + "\n")
             for v in b.flatten():
@@ -92,11 +118,19 @@ def write(n):
                 fc.write(tohex(v, ACC_W) + "\n")
             ft.write("Test %d: %s\nA =\n%s\nB =\n%s\nC = A x B =\n%s\n"
                      "C (Q12.8 real) =\n%s\n\n" % (k, name, a, b, c, c / 256.0))
-    print("N=%d: %d tests written to %s" % (n, len(tests), OUT))
+    print("N=%d%s: %d tests written to %s" % (n, tag, len(tests), OUT))
     return len(tests)
 
 
 if __name__ == "__main__":
-    sizes = [int(x) for x in sys.argv[1:]] or [3, 4]
+    args = sys.argv[1:]
+    stress = 0
+    if "--stress" in args:
+        i = args.index("--stress")
+        stress = int(args[i + 1])
+        del args[i:i + 2]
+    sizes = [int(x) for x in args] or [3, 4]
     for n in sizes:
         write(n)
+        if stress:
+            write(n, stress_tests(n, stress), "_stress")
